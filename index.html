@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hex90</title>
+<style>
+/**
+ * @group Reset.
+ */
+html,
+body,
+h1,
+h2,
+ul {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+/**
+ * @group Typography.
+ */
+:root {
+    --callout-text: #5afd96;
+}
+@font-face {
+    font-family: "MonoSpatial";
+    src: url("static/fonts/MonoSpatial.ttf");
+}
+@font-face {
+    font-family: "NEON CLUB MUSIC Medium";
+    src: url("static/fonts/NEON CLUB MUSIC_medium.otf");
+}
+body {
+    font-family: "MonoSpatial";
+    text-transform: lowercase;
+    color: #FFF;
+}
+a {
+    color: var(--callout-text);
+}
+ul {
+    list-style-type: "~ ";
+}
+abbr.initialism {
+    text-transform: uppercase;
+}
+
+header h1 {
+    font: 130px/130px "NEON CLUB MUSIC Medium";
+    color: var(--callout-text);
+}
+header p {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: #dcb4fd;
+}
+section h2 {
+    margin-bottom: 1em;
+}
+@keyframes blink-text {
+    from, to { color: transparent; }
+    50% { color: inherit; }
+}
+section h2::after {
+    content: "_";
+    animation: blink-text .75s step-end infinite;
+}
+footer {
+    font-style: italic;
+}
+
+
+/**
+ * @group Backgrounds.
+ */
+body {
+    background: #b350ff fixed url("static/img/bg.png") bottom left / auto no-repeat;
+}
+
+/**
+ * @group Layout.
+ */
+body {
+    padding: 3em 2em 2em 2em;
+}
+header {
+    position: fixed;
+}
+main {
+    margin-left: 600px;
+}
+section {
+    margin: 0 0 2em;
+}
+
+/**
+ * @group Mobile.
+ */
+@media screen and (max-width: 750px) {
+    header {
+        position: static;
+    }
+    header h1 {
+        font-size: 64px;
+        line-height: normal;
+    }
+    header p {
+        font-size: 15px;
+    }
+    main {
+        margin-left: 0;
+    }
+    section {
+        margin-top: 3em;
+    }
+    body {
+        background-size: contain;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Hex90</h1>
+        <p>A queer hacker salon in NYC</p>
+    </header>
+    <div class="h-event vevent"><main><div class="p-description description">
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Livecoding</li>
+                <li>Photobooth</li>
+                <li>Indie games by <a href="https://deathbyaudioarcade.com/">Death by Audio</a></li>
+                <li><abbr class="initialism">NES</abbr> games</li>
+                <li>Music</li>
+                <li>Visuals</li>
+                <li>Local chatrooms</li>
+                <li>Surprise guest project</li>
+            </ul>
+        </section>
+        <section id="next-party">
+            <h2 class="p-name p-summary summary">Hex90::init()</h2>
+            <p>
+                03.10.2019 @
+                <span class="p-location location">
+                    <a href="https://thefootlightbar.nyc/">The Footlight</a><br />
+                    465 Seneca Avenue<br />
+                    Ridgewood, NY 11385
+                </span><br />
+                <abbr class="dt-start dtstart" title="2019-03-10T21:00:00">9pm</abbr>
+                &ndash;
+                <abbr class="dt-end dtend" title="2019-03-11T02:00:00">2am</abbr>
+            </p>
+            <ul>
+                <li>This venue is <strong>accessible</strong>.</li>
+                <li>This venue has <strong>gender-neutral restrooms</strong>.</li>
+            </ul>
+            <p><strong>Dressing up is encouraged but not required.</strong></p>
+            <p>Cover: $5.00</p>
+            <p><a href="webcal://h2vx.com/ics/https%3A%2F%2Fhexninety.github.io%2F" class="u-url url">Subscribe to our calendar</a></p>
+        </section>
+        <footer>
+            <p>This space is not exclusionary, but it is an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. Don't piss off the hackers. ;)</p>
+        </footer>
+    </div></main></div><!-- .h-event.vevent -->
+</body>
+</html>
