@@ -91,6 +91,10 @@ body {
 header {
     position: fixed;
 }
+video {
+    margin: 2em 0 0 0;
+    max-width: 550px;
+}
 main {
     margin-left: 600px;
 }
@@ -112,6 +116,9 @@ section {
     header p {
         font-size: 15px;
     }
+    video {
+        max-width: 100%;
+    }
     main {
         margin-left: 0;
     }
@@ -128,6 +135,12 @@ section {
     <header>
         <h1>Hex90</h1>
         <p>A queer hacker salon in NYC</p>
+        <video id="sizzle-reel" controls="controls"
+             src="static/vid/They%27re%20Called%20Hackers.mp4"
+             poster="static/img/poster.transparent.access-granted.png"
+        >
+            <p><a href="static/vid/They%27re%20Called%20Hackers.mp4">Watch the video</a>.</p>
+        </video>
     </header>
     <div class="h-event vevent"><main><div class="p-description description">
         <section>
@@ -141,6 +154,12 @@ section {
                 <li>Visuals</li>
                 <li>Local chatrooms</li>
                 <li>Surprise guest project</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Featured Artist</h2>
+            <ul>
+                <li><a href="https://zachkrall.online/">Zach Krall</a></li>
             </ul>
         </section>
         <section id="next-party">
@@ -168,5 +187,6 @@ section {
             <p>This space is not exclusionary, but it is an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. Don't piss off the hackers. ;)</p>
         </footer>
     </div></main></div><!-- .h-event.vevent -->
+    <script src="static/js/main.js"></script>
 </body>
 </html>
