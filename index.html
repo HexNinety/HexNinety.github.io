@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hex90</title>
+    <link href="https://artfully-herokuapp-com.global.ssl.fastly.net/assets/themes/default.css" media="screen" rel="stylesheet" type="text/css" />
 <style>
 /**
  * @group Reset.
@@ -129,6 +130,16 @@ section {
         background-size: contain;
     }
 }
+#shopping-cart {
+    background-color: rgb(179, 80, 255, .5);
+}
+.performance {
+    color: inherit;
+}
+.ticket-types .ticket-type-price {
+    background: none;
+    font-size: medium;
+}
 </style>
 </head>
 <body>
@@ -209,10 +220,20 @@ section {
             <p>Cover: $5.00</p>
             <p><a href="webcal://h2vx.com/ics/https%3A%2F%2Fhexninety.github.io%2F" class="u-url url">Subscribe to our calendar</a></p>
         </section>
+        <section>
+            <div id="artfully-event"></div>
+        </section>
         <footer>
             <p>This space is not exclusionary, but it is an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. Don't piss off the hackers. ;)</p>
         </footer>
     </div></main></div><!-- .h-event.vevent -->
     <script src="static/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://artfully-herokuapp-com.global.ssl.fastly.net/assets/artfully-v3.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            artfully.widgets.event().display(17391);
+        });
+    </script>
 </body>
 </html>
