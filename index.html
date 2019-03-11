@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hex90</title>
-    <link href="https://artfully-herokuapp-com.global.ssl.fastly.net/assets/themes/default.css" media="screen" rel="stylesheet" type="text/css" />
 <style>
 /**
  * @group Reset.
@@ -75,6 +74,15 @@ footer {
     font-style: italic;
 }
 
+#waiting-loader {
+    text-transform: uppercase;
+    word-break: break-all;
+    color: var(--callout-text);
+}
+#waiting-loader::after {
+    content: "…";
+    animation: blink-text .75s step-end infinite;
+}
 
 /**
  * @group Backgrounds.
@@ -130,24 +138,6 @@ section {
         background-size: contain;
     }
 }
-
-/**
- * @group Shopping cart overrides.
- */
-#shopping-cart {
-    background-color: rgb(179, 80, 255, .5);
-}
-.performance {
-    color: inherit;
-}
-.performance,
-.ticket-types li {
-    list-style-type: none;
-}
-.ticket-types .ticket-type-price {
-    background: none;
-    font-size: medium;
-}
 </style>
     <meta property="og:url" content="https://hexninety.github.io/" />
     <meta property="og:type" content="website" />
@@ -198,64 +188,25 @@ section {
         </video>
     </header>
     <div class="h-event vevent"><main><div class="p-description description">
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Livecoding</li>
-                <li>Photobooth</li>
-                <li>Indie games by <a href="https://deathbyaudioarcade.com/">Death by Audio</a></li>
-                <li><abbr class="initialism">NES</abbr> games</li>
-                <li>Music</li>
-                <li>Visuals</li>
-                <li>Local chatrooms</li>
-                <li>Hacking demos</li>
-                <li>Surprise guest project</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Featured Artists</h2>
-            <ul>
-                <li><a href="https://zachkrall.online/">Zach Krall</a></li>
-                <li><a href="https://soundcloud.com/djdelish">DJ Delish</a></li>
-                <li><a href="https://www.craigmontyjames.com/">CM James</a></li>
-                <li><a href="https://soundcloud.com/kennygeezus">Kenny Geezus</a></li>
-            </ul>
-        </section>
         <section id="next-party">
-            <h2 class="p-name p-summary summary">Hex90::init()</h2>
-            <p>
-                03.10.2019 @
-                <span class="p-location location">
-                    <a href="https://thefootlightbar.nyc/">The Footlight</a><br />
-                    465 Seneca Avenue<br />
-                    Ridgewood, NY 11385
-                </span><br />
-                <abbr class="dt-start dtstart" title="2019-03-10T21:00:00">9pm</abbr>
-                &ndash;
-                <abbr class="dt-end dtend" title="2019-03-11T02:00:00">2am</abbr>
-            </p>
-            <ul>
-                <li>This venue is <strong>accessible</strong>.</li>
-                <li>This venue has <strong>gender-neutral restrooms</strong>.</li>
-            </ul>
-            <p><strong>Dressing up is encouraged but not required.</strong></p>
-            <p>Cover: $5.00</p>
-            <p><a href="webcal://h2vx.com/ics/https%3A%2F%2Fhexninety.github.io%2F" class="u-url url">Subscribe to our calendar</a></p>
-        </section>
-        <section>
-            <div id="artfully-event"></div>
+            <h2 class="p-name p-summary summary">Scanning for next party info</h2>
+            <p id="waiting-loader"></p>
+            <script>
+                (function () {
+                    function dotdotdot (el) {
+                        var str = Math.random().toString(16).substring(2, 3);
+                        el.innerHTML = el.textContent + str;
+                        setTimeout(dotdotdot, 500, el);
+                    }
+                    var el = document.getElementById('waiting-loader');
+                    dotdotdot(el);
+                })()
+            </script>
         </section>
         <footer>
-            <p>This space is not exclusionary, but it is an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately without a refund. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. Don't piss off the hackers. ;)</p>
+            <p>These parties are not exclusionary, but they are an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately without a refund. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. The str8s are welcome as long as they don't piss off the hackers. ;)</p>
         </footer>
     </div></main></div><!-- .h-event.vevent -->
     <script src="static/js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://artfully-herokuapp-com.global.ssl.fastly.net/assets/artfully-v3.js"></script>
-    <script>
-        jQuery(document).ready(function(){
-            artfully.widgets.event().display(17391);
-        });
-    </script>
 </body>
 </html>

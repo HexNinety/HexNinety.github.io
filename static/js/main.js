@@ -19,4 +19,4 @@
         el.setAttribute('src', vids[i].src);
         el.querySelector('a').setAttribute('href', vids[i].src);
     });
-}());
+})();
