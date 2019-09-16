@@ -1,0 +1,109 @@
+[
+    {
+        "id": "commands",
+        "flag": [
+            "date",
+            "help",
+            "hostname",
+            "uname",
+            "whoami"
+        ]
+    },
+    {
+        "id": "date",
+        "text": "__NOW__"
+    },
+    {
+        "id": "help",
+        "text": "COMMAND LISTING:\n\ndate\t\tdisplay date and time\n\nhelp\t\tDisplay builtin commands. (this screen)\n\nhostname\tprint name of the current host system\n\nuname\t\tPrint operating system name\n\nwhoami\t\tdisplay effective user id"
+    },
+    {
+        "id": "hostname",
+        "text": "phreakflag"
+    },
+    {
+        "id": "uname",
+        "text": "0x90 LTS (GNU/Linux 5.2-generic x86_64)"
+    },
+    {
+        "id": "whoami",
+        "text": "phreaker"
+    },
+    {
+        "id": "0",
+        "flag": [
+            "mail"
+        ],
+        "next": "1",
+        "text": "Hex90 LTS phreakflag tty1\n\nphreakflag login: phreaker\nPassword:                 \nLast login: __LAST_LOGIN__ on tty1\n\n",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Enter `mail` to read your messages.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "1",
+        "flag": [
+            "1"
+        ],
+        "next": "2",
+        "text": "Mail version 16.2.4 02/30/2019  Type 'help' for help.\n\"/var/mail/phreaker\": 1 message 1 new\n>N  1 aephid40@wonderville.nyc __MAIL_DATE__ Party invitation",
+        "prompt": "& ",
+        "placeholder": "Enter `1` to read aephid40's message.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "2",
+        "flag": [
+            "q"
+        ],
+        "next": "3",
+        "text": "From aephid40@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: Party invitation\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: __MAIL_DATE__\nFrom: aephid40@wonderville.nyc\n\nHey,\n\nBeen a while. We need to talk.\n\nHex90 is happening again. Have you been before? It's a queer jam for hackers, this time at the Wonderville arcade.\n\nWe've been working on setting up a secure uplink there and...well...we'll talk more later. Not now, not from your system.\n\nThere's something I...need to show you. If you make it to the party with your laptop, connect to the Wonderville network and `talk` me up.\n\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt\n\nI hope you can make it. Stay safe.\n\n-aephid40",
+        "prompt": "& ",
+        "placeholder": "Enter `q` to return to your shell.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "3",
+        "flag": [
+            "curl -L https://hexninety.github.io/invitation.txt"
+        ],
+        "next": "4",
+        "text": "phreaker@phreakflag: grep -ri -A 3 invite /var/mail/phreaker\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `curl -L <URL>` to view the invitation.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "4",
+        "flag": [
+            "vlc https://hexninety.github.io/video.mp4"
+        ],
+        "next": "5",
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `vlc <URL>` to watch the video.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "5",
+        "flag": [
+            "links"
+        ],
+        "next": "6",
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `links` to get your ticket.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "6",
+        "flag": [
+            ""
+        ],
+        "next": "end",
+        "text": "",
+        "prompt": "",
+        "placeholder": "",
+        "retry_text": ""
+    }
+]

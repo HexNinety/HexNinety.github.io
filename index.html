@@ -3,142 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>hex90</title>
-<style>
-/**
- * @group Reset.
- */
-html,
-body,
-h1,
-h2,
-ul {
-    margin: 0;
-    border: none;
-    padding: 0;
-}
+    <title>hex90: Hello, friend.</title>
 
-/**
- * @group Typography.
- */
-:root {
-    --callout-text: #5afd96;
-}
-@font-face {
-    font-family: "MonoSpatial";
-    src: url("static/fonts/MonoSpatial.ttf");
-}
-@font-face {
-    font-family: "NEON CLUB MUSIC Medium";
-    src: url("static/fonts/NEON CLUB MUSIC_medium.otf");
-}
-body {
-    font-family: "MonoSpatial";
-    text-transform: lowercase;
-    color: #FFF;
-}
-a {
-    color: var(--callout-text);
-}
-ul {
-    list-style-type: "~ ";
-}
-abbr.initialism {
-    text-transform: uppercase;
-}
+    <link rel="stylesheet" href="style.css" />
 
-header h1 {
-    font: 130px/130px "NEON CLUB MUSIC Medium";
-    color: var(--callout-text);
-}
-header p {
-    margin: 0;
-    padding: 0;
-    font-size: 35px;
-    font-style: italic;
-    letter-spacing: 3px;
-    color: #dcb4fd;
-}
-section h2 {
-    margin-bottom: 1em;
-}
-@keyframes blink-text {
-    from, to { color: transparent; }
-    50% { color: inherit; }
-}
-section h2::after {
-    content: "_";
-    animation: blink-text .75s step-end infinite;
-}
-footer {
-    font-style: italic;
-}
-
-#waiting-loader {
-    text-transform: uppercase;
-    word-break: break-all;
-    color: var(--callout-text);
-}
-#waiting-loader::after {
-    content: "…";
-    animation: blink-text .75s step-end infinite;
-}
-
-/**
- * @group Backgrounds.
- */
-body {
-    background: #b350ff fixed url("static/img/bg.png") bottom left / auto no-repeat;
-}
-
-/**
- * @group Layout.
- */
-body {
-    padding: 3em 2em 2em 2em;
-}
-header {
-    position: fixed;
-}
-video {
-    margin: 2em 0 0 0;
-    max-width: 550px;
-}
-main {
-    margin-left: 600px;
-}
-section {
-    margin: 0 0 2em;
-}
-
-/**
- * @group Mobile.
- */
-@media screen and (max-width: 750px) {
-    header {
-        position: static;
-    }
-    header h1 {
-        font-size: 64px;
-        line-height: normal;
-    }
-    header p {
-        font-size: 15px;
-    }
-    video {
-        max-width: 100%;
-    }
-    main {
-        margin-left: 0;
-    }
-    section {
-        margin-top: 3em;
-    }
-    body {
-        background-size: contain;
-    }
-}
-</style>
     <meta property="og:url" content="https://hexninety.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
@@ -149,64 +17,92 @@ section {
     <meta name="twitter:title" content="Hex90" />
     <meta name="twitter:description" content="A queer hacker salon in NYC." />
     <meta name="twitter:image" content="https://hexninety.github.io/static/img/bg.png" />
+    <style>
+.h-event { display: none; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Hex90</h1>
-        <p>A queer hacker salon in NYC</p>
-        <video id="sizzle-reel" controls="controls"
-             src="static/vid/They%27re%20Called%20Hackers.mp4"
-             poster="static/img/poster.transparent.access-granted.png"
-             data-videos='[
-                 {
-                     "src": "static/vid/They%27re%20Called%20Hackers.mp4",
-                     "poster": "static/img/poster.transparent.access-granted.png"
-                 },
-                 {
-                     "src": "static/vid/untitled-protests.mp4",
-                     "poster": "static/img/poster.transparent.motherboard.png"
-                 },
-                 {
-                     "src": "static/vid/elaine-the-hacker.mp4",
-                     "poster": "static/img/poster.transparent.matrix-trinity.png"
-                 },
-                 {
-                     "src": "static/vid/Characteristics%20of%20a%20Computer%20Criminal.mp4",
-                     "poster": "static/img/poster.transparent.hacked-text.png"
-                 },
-                 {
-                     "src": "static/vid/Prince%20giving%20advice%20about%20Internet.mp4",
-                     "poster": "static/img/poster.transparent.prince.png"
-                 },
-                 {
-                     "src": "static/vid/hackersoftheworldunite.mp4",
-                     "poster": "static/img/poster.transparent.hackers-1995.jpg"
-                 }
-             ]'
-        >
-            <p><a href="static/vid/They%27re%20Called%20Hackers.mp4">Watch the video</a>.</p>
-        </video>
-    </header>
-    <div class="h-event vevent"><main><div class="p-description description">
-        <section id="next-party">
-            <h2 class="p-name p-summary summary">Scanning for next party info</h2>
-            <p id="waiting-loader"></p>
-            <script>
-                (function () {
-                    function dotdotdot (el) {
-                        var str = Math.random().toString(16).substring(2, 3);
-                        el.innerHTML = el.textContent + str;
-                        setTimeout(dotdotdot, 500, el);
-                    }
-                    var el = document.getElementById('waiting-loader');
-                    dotdotdot(el);
-                })()
-            </script>
-        </section>
-        <footer>
-            <p>These parties are not exclusionary, but they are an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately without a refund. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. The str8s are welcome as long as they don't piss off the hackers. ;)</p>
-        </footer>
-    </div></main></div><!-- .h-event.vevent -->
-    <script src="static/js/main.js"></script>
+    <div id="game-container">
+        <div id="trailer" style="text-align: center; display: none;">
+            <video src="video.mp4" width="100%" controls="controls">
+                <p><a href="video.mp4">Watch the video.</a></p>
+            </video>
+        </div>
+        <div id="game-screen"></div>
+        <div id="player-text">
+            <div id="player-prompt"></div>
+            <form id="hex90-form"
+                action="#" method="GET"
+                data-puzzle=""
+            >
+                <input id="flag" name="flag" value="" placeholder="" />
+            </form>
+        </div>
+    </div>
+
+    <script id="game-text" type="text/plain"></script>
+    <script id="game-prompt" type="text/plain"></script>
+    <script src="main.js"></script>
+    <script src="trailer.js"></script>
+
+    <div class="h-event vevent">
+        <div class="p-description description">
+            <pre>
+R  2019-09-16
+FM HEX90
+TO QUEER HACKERS OF THE WORLD
+
+HELLO, FRIEND (SECRET//NOFORN)
+
+HEX90
+a queer hacker salon in nyc
+
+features_
+
+~ visuals &amp; livecoding by Livecode.NYC
+~ indie arcade cabinets by Death By Audio
+~ music performances by XOXA
+~ hacking demos by Tech Learning Collective
+~ augmented reality cybersecurity game
+
+featured artists_
+
+~ TO BE ANNOUNCED
+
+info_
+
+November 16, 2019 @ Wonderville
+1186 Broadway, Brooklyn, NY 11221
+9pm - 2am
+
+~ this venue is accessible
+~ this venue has gender-neutral restrooms
+
+*dressing up is encouraged but not required*
+
+Cover:
+$15.00 - str8t cismen
+$10.00 - queers and femmes
+
+NOTICE:
+This space is not exclusionary, but it is an intentionally queer space. Consent and respect are not optional! Anyone being disrespectful will be removed immediately without a refund. We are against technocapitalist motives. We are a space for queer hackers, not for Silicon Valley fans. Don't piss off the hackers. ;)
+
+Hex90
+
+watch the video:
+https://hexninety.github.io/video.mp4
+            </pre>
+        </div>
+        <p class="p-name p-summary summary">Hex90: Hello, friend</p>
+        <p class="p-location location">
+            1186 Broadway, Brooklyn, NY 11221
+            (<a href="https://wonderville.nyc/">Wonderville</a>)
+        </p>
+        <p>
+            Doors: <abbr class="dt-start dtstart" title="2019-11-16T21:00:00">9pm</abbr><br />
+            Until: <abbr class="dt-start dtstart" title="2019-11-17T02:00:00">2am</abbr>
+        </p>
+    </div><!-- .h-event.vevent -->
+    <div id="artfully-event"></div>
 </body>
 </html>
