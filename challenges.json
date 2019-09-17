@@ -100,10 +100,10 @@
         "flag": [
             ""
         ],
-        "next": "end",
+        "next": "6",
         "text": "",
-        "prompt": "",
-        "placeholder": "",
-        "retry_text": ""
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Enter `help` for help.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
     }
 ]

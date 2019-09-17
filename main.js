@@ -30,6 +30,7 @@ var hex90 = (function () {
      */
     function showPlayerText (speed) {
         document.getElementById('player-text').style.display = 'flex';
+        document.getElementById('flag').style.visibility = 'visible';
         type(0, speed, 'game-prompt', 'player-prompt', function () {
             return document.getElementById('flag').focus();
         });

@@ -21,6 +21,10 @@
     function handleSubmit (e, challenges) {
         e.preventDefault(); // Do not reload.
 
+        // Hide the player's input text field.
+        var input = document.getElementById('flag');
+        input.style.visibility = 'hidden';
+
         // Current challenge is the "puzzle."
         var challenge = challenges.find(function ( c ) {
             return e.target.getAttribute('data-puzzle') == c.id;
@@ -32,7 +36,7 @@
         });
 
         // The player's entry is the "user flag."
-        var user_flag = document.getElementById('flag').value;
+        var user_flag = input.value;
 
         if (challenge.flag.includes(user_flag)) {
             var next = challenges.find(function ( c ) {
@@ -42,7 +46,7 @@
             // Set up the game for the next challenge.
             gameText(next.text, next, user_flag);
             document.getElementById('game-prompt').textContent = next.prompt;
-            document.getElementById('flag').setAttribute('placeholder', next.placeholder);
+            input.setAttribute('placeholder', next.placeholder);
             e.target.setAttribute('data-puzzle', next.id);
 
             // SPECIAL FLAGS.
@@ -65,7 +69,6 @@
             if ('links' === user_flag) {
                 showShoppingLinks();
                 document.getElementById('flag').value = '';
-                return false;
             }
 
         } else if (commands.flag.includes(user_flag)) {
