@@ -16,14 +16,14 @@ body {
 #player-prompt {
     white-space: pre-wrap;
 }
-#game-screen,
-#player-text {
-    margin-bottom: 3.75em;
+#game-screen {
+    margin-bottom: 1em;
 }
 
 #player-text {
     display: none;
     flex-wrap: wrap;
+    margin-bottom: 3em;
 }
 #player-text form {
     flex-grow: 1;

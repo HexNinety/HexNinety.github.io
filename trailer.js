@@ -2,6 +2,16 @@
  * JavaScript trailer runner for Hex90 game.
  */
 (function () {
+
+    /**
+     * Keep track of how many incorrect flags the player
+     * entered so that we can help them along if they are
+     * having too much trouble figuring things out.
+     *
+     * @var {Number} incorrect_attempts
+     */
+    var incorrect_attempts = 0;
+
     /**
      * Catches the flag submission form to progress the game.
      *
@@ -50,9 +60,11 @@
                 var trailer = document.getElementById('trailer');
                 trailer.style.display = 'block';
                 trailer.querySelector('video').play()
+                // Do not `return` here.
             }
             if ('links' === user_flag) {
-                window.location = 'https://example.com/'
+                showShoppingLinks();
+                document.getElementById('flag').value = '';
                 return false;
             }
 
@@ -62,12 +74,27 @@
             }).text;
             gameText(text, challenge, user_flag);
         } else {
+            incorrect_attempts++;
+            // Offer tickets if the player is having trouble.
+            if (3 < incorrect_attempts) {
+                showShoppingLinks();
+            }
             gameText(challenge.retry_text, challenge, user_flag);
         }
 
         redrawGameScreen();
-        hex90.play(2);
+        hex90.play(1);
         return false; // Always return false.
+    }
+
+    /**
+     * Display shopping links.
+     */
+    function showShoppingLinks () {
+        var el = document.getElementById('artfully-event');
+        document.getElementById('shopping-cart-controls').style.display = 'block';
+        el.style.display = 'block';
+        el.scrollIntoView(true);
     }
 
     /**
@@ -115,7 +142,7 @@
     function showInvite (text) {
         redrawGameScreen();
         document.getElementById('game-text').textContent = text;
-        hex90.play(2);
+        hex90.play(1);
     }
 
     fetch('challenges.json')
@@ -153,6 +180,6 @@
         document.getElementById('flag').setAttribute( 'placeholder', challenge.placeholder );
 
         // How about a nice game of Chess?
-        hex90.play(2);
+        hex90.play(1);
     }
 })();
