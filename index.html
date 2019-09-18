@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://artfully-herokuapp-com.global.ssl.fastly.net/assets/themes/default.css" media="screen" type="text/css" />
 
+    <link rel="shortcut icon" href="static/img/bg.jpg" />
+
     <meta property="og:url" content="https://hexninety.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="Hex90" />
     <meta property="og:description" content="A queer hacker salon in NYC." />
-    <meta property="og:image" content="https://hexninety.github.io/static/img/bg.png" />
+    <meta property="og:image" content="https://hexninety.github.io/static/img/bg.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hex90" />
     <meta name="twitter:description" content="A queer hacker salon in NYC." />
-    <meta name="twitter:image" content="https://hexninety.github.io/static/img/bg.png" />
+    <meta name="twitter:image" content="https://hexninety.github.io/static/img/bg.jpg" />
     <style>
 .h-event { display: none; }
 
@@ -79,7 +81,11 @@
                 action="#" method="GET"
                 data-puzzle=""
             >
-                <input id="flag" name="flag" value="" placeholder="" />
+                <input id="flag" name="flag"
+                    value=""
+                    placeholder=""
+                    spellcheck="false"
+                />
             </form>
         </div>
     </div>
