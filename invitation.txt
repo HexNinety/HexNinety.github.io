@@ -9,9 +9,10 @@ a queer hacker salon in nyc
 
 features_
 
-~ visuals & livecoding by Livecode.NYC
+~ visuals & livecoding by LiveCode.NYC
 ~ indie arcade cabinets by Death By Audio
 ~ music performances by XOXA
+~ glowing crystal crowns and accessories by Half Lucid Jewelry
 ~ hacking demos by Tech Learning Collective
 ~ cybersecurity alternate reality experience by Shift-CTRL Space
 
