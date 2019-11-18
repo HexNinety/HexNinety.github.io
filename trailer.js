@@ -40,7 +40,7 @@
 
         if (challenge.flag.includes(user_flag)) {
             var next = challenges.find(function ( c ) {
-                return challenge.next == c.id;
+                return challenge.next[user_flag] == c.id;
             });
 
             // Set up the game for the next challenge.
@@ -50,7 +50,7 @@
             e.target.setAttribute('data-puzzle', next.id);
 
             // SPECIAL FLAGS.
-            if ('curl -L https://hexninety.github.io/invitation.txt' === user_flag) {
+            if ('curl -L https://hexninety.github.io/invitation.txt' === user_flag || 'curl https://hexninety.github.io/invitation.txt' === user_flag) {
                 fetch('invitation.txt')
                     .then(function (response) {
                         return response.text();
@@ -69,6 +69,9 @@
             if ('links' === user_flag) {
                 showShoppingLinks();
                 document.getElementById('flag').value = '';
+            }
+            if ('links techlearningcollective.com' === user_flag) {
+                window.location = 'https://techlearningcollective.com/';
             }
 
         } else if (commands.flag.includes(user_flag)) {

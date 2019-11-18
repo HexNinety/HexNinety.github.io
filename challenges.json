@@ -2,6 +2,9 @@
     {
         "id": "commands",
         "flag": [
+            "cat todo.txt",
+            "less todo.txt",
+            "more todo.txt",
             "cat loot.txt",
             "date",
             "help",
@@ -11,6 +14,18 @@
             "uname",
             "whoami"
         ]
+    },
+    {
+        "id": "cat todo.txt",
+        "text": "Attend Hackers Next Door: https://hnd.techlearningcollective.com"
+    },
+    {
+        "id": "less todo.txt",
+        "text": "Attend Hackers Next Door: https://hnd.techlearningcollective.com"
+    },
+    {
+        "id": "more todo.txt",
+        "text": "Attend Hackers Next Door: https://hnd.techlearningcollective.com"
     },
     {
         "id": "cat loot.txt",
@@ -30,7 +45,7 @@
     },
     {
         "id": "ls",
-        "text": "Desktop\nDocuments\nDownloads\nOnionShare\nbin\nsrc\ntmp\nloot.txt"
+        "text": "Desktop\nDocuments\nDownloads\nOnionShare\nbin\nsrc\ntmp\ntodo.txt\nloot.txt"
     },
     {
         "id": "pwd",
@@ -49,8 +64,10 @@
         "flag": [
             "mail"
         ],
-        "next": "1",
-        "text": "Hex90 LTS phreakflag tty1\n\nphreakflag login: phreaker\nPassword:                 \nLast login: __LAST_LOGIN__ on tty1\n\n",
+        "next": {
+            "mail": "1"
+        },
+        "text": "Hex90 LTS phreakflag tty1\n\nphreakflag login: phreaker\nPassword:                 \nLast login: __LAST_LOGIN__ on tty1\n\nYou have mail.",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Enter `mail` to read your messages.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
@@ -58,21 +75,46 @@
     {
         "id": "1",
         "flag": [
-            "1"
+            "1",
+            "2"
         ],
-        "next": "2",
-        "text": "Mail version 16.2.4 02/30/2019  Type 'help' for help.\n\"/var/mail/phreaker\": 1 message 1 new\n>N  1 a3g1s@wonderville.nyc __MAIL_DATE__ Party invitation",
+        "next": {
+            "1": "2",
+            "2": "2A"
+        },
+        "text": "Mail version 16.2.4 02/30/2019  Type 'help' for help.\n\"/var/mail/phreaker\": 2 messages 1 new\n>   1 a3g1s@wonderville.nyc Tue Nov 5 2019 10:13:10 GMT-0500 (Eastern Standard Time) Party invitation\n>N  2 a3g1s@wonderville.nyc Sun Nov 17 2019 13:37:00 GMT-0500 (Eastern Standard Time) New information about the archive\n",
         "prompt": "& ",
-        "placeholder": "Enter `1` to read a3g1s's message.",
+        "placeholder": "Enter `1` or `2` to read a3g1s's message.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
     },
     {
         "id": "2",
         "flag": [
+            "q",
+            "n",
+            "2"
+        ],
+        "next": {
+            "q": "3",
+            "n": "2A",
+            "2": "2A"
+        },
+        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: Party invitation\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: __MAIL_DATE__\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nBeen a while. We need to talk.\n\nHex90 is happening again. Have you been before? It's a queer jam for hackers, this time at the Wonderville arcade.\n\nWe've been working on setting up a secure uplink there and...well...we'll talk more later. Not now, not from your system.\n\nThere's something I...need to show you. If you make it to the party with your laptop, connect to the Wonderville network and `talk` me up.\n\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt\n\nI hope you can make it. Stay safe.\n\n-a3g1s",
+        "prompt": "& ",
+        "placeholder": "Enter `q` to return to your shell.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "2A",
+        "flag": [
+            "1",
             "q"
         ],
-        "next": "3",
-        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: Party invitation\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: __MAIL_DATE__\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nBeen a while. We need to talk.\n\nHex90 is happening again. Have you been before? It's a queer jam for hackers, this time at the Wonderville arcade.\n\nWe've been working on setting up a secure uplink there and...well...we'll talk more later. Not now, not from your system.\n\nThere's something I...need to show you. If you make it to the party with your laptop, connect to the Wonderville network and `talk` me up.\n\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt\n\nI hope you can make it. Stay safe.\n\n-a3g1s",
+        "next": {
+            "q": "3A",
+            "1": "2"
+        },
+        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: New information about the archive\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Sun Nov 17 2019 13:37:00 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nThanks so much for helping me out at the party.\n\nDon't go spreading this around, but I left my secret server running at Wonderville so you can check in on the archive. When I have more information to share with you, I'll put it somewhere there, so don't forget to `talk` me up....\n\nIn the mean time, take the opportunity to level-up your 1337 skillz and see if you can find an 31337 mentor from our friends at TechLearningCollective.com.\n\n-a3g1s",
         "prompt": "& ",
         "placeholder": "Enter `q` to return to your shell.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
@@ -80,12 +122,29 @@
     {
         "id": "3",
         "flag": [
+            "curl https://hexninety.github.io/invitation.txt",
             "curl -L https://hexninety.github.io/invitation.txt"
         ],
-        "next": "4",
+        "next": {
+            "curl https://hexninety.github.io/invitation.txt": "4",
+            "curl -L https://hexninety.github.io/invitation.txt": "4"
+        },
         "text": "phreaker@phreakflag: grep -ri -A 3 invite /var/mail/phreaker\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Use `curl -L <URL>` to view the invitation.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "3A",
+        "flag": [
+            "links techlearningcollective.com"
+        ],
+        "next": {
+            "links techlearningcollective.com": "6"
+        },
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `links techlearningcollective.com` to start leveling-up your skillz.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
     },
     {
@@ -93,7 +152,9 @@
         "flag": [
             "vlc https://hexninety.github.io/video.mp4"
         ],
-        "next": "5",
+        "next": {
+            "vlc https://hexninety.github.io/video.mp4": "5"
+        },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Use `vlc <URL>` to watch the video.",
@@ -104,7 +165,9 @@
         "flag": [
             "links"
         ],
-        "next": "6",
+        "next": {
+            "links": "6"
+        },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Use `links` to get your ticket.",
@@ -115,7 +178,9 @@
         "flag": [
             ""
         ],
-        "next": "6",
+        "next": {
+            "": "6"
+        },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Enter `help` for help.",
