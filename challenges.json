@@ -123,11 +123,13 @@
         "id": "3",
         "flag": [
             "curl https://hexninety.github.io/invitation.txt",
-            "curl -L https://hexninety.github.io/invitation.txt"
+            "curl -L https://hexninety.github.io/invitation.txt",
+            "mail"
         ],
         "next": {
             "curl https://hexninety.github.io/invitation.txt": "4",
-            "curl -L https://hexninety.github.io/invitation.txt": "4"
+            "curl -L https://hexninety.github.io/invitation.txt": "4",
+            "mail": "1"
         },
         "text": "phreaker@phreakflag: grep -ri -A 3 invite /var/mail/phreaker\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt",
         "prompt": "phreaker@phreakflag: ",
@@ -137,10 +139,12 @@
     {
         "id": "3A",
         "flag": [
-            "links techlearningcollective.com"
+            "links techlearningcollective.com",
+            "mail"
         ],
         "next": {
-            "links techlearningcollective.com": "6"
+            "links techlearningcollective.com": "6",
+            "mail": "1"
         },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
@@ -150,10 +154,12 @@
     {
         "id": "4",
         "flag": [
-            "vlc https://hexninety.github.io/video.mp4"
+            "vlc https://hexninety.github.io/video.mp4",
+            "mail"
         ],
         "next": {
-            "vlc https://hexninety.github.io/video.mp4": "5"
+            "vlc https://hexninety.github.io/video.mp4": "5",
+            "mail": "1"
         },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
@@ -163,10 +169,12 @@
     {
         "id": "5",
         "flag": [
-            "links"
+            "links",
+            "mail"
         ],
         "next": {
-            "links": "6"
+            "links": "6",
+            "mail": "1"
         },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
@@ -176,10 +184,12 @@
     {
         "id": "6",
         "flag": [
-            ""
+            "",
+            "mail"
         ],
         "next": {
-            "": "6"
+            "": "6",
+            "mail": "1"
         },
         "text": "",
         "prompt": "phreaker@phreakflag: ",
