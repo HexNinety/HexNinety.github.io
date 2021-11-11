@@ -11,7 +11,7 @@ body {
 /**
  * @group "Splash" page.
  */
-#moving-clouds {
+.moving-clouds {
     background-image: url("/static/img/clouds.3c700c13.png");
     position: absolute;
     z-index: 1;

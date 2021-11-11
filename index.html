@@ -23,6 +23,8 @@
 .h-event {
     font-family: Montserrat, Helvetica, Arial, sans-serif;
     color: #fff;
+}
+.h-event .main {
     max-width: 66%;
     margin: 0 auto;
 }
@@ -41,6 +43,9 @@
         color: inherit;
     }
 }
+a:link {
+    color: #fff;
+}
     </style>
 </head>
 <body class="splash">
@@ -57,19 +62,37 @@
                 <p><small>the first hackers</small></p>
             </div>
         </main>
-        <div id="moving-clouds"></div>
+        <div class="moving-clouds"></div>
     </div>
-    <div class="h-event vevent">
-        <div class="p-description description">
-            <pre style="color: rgb(32, 166, 15)">
+    <div class="h-event vevent" style="position: relative; overflow: hidden;">
+        <div class="moving-clouds" style="height: 100%"></div>
+        <div class="main">
+            <div class="p-description description">
+                <pre style="color: rgb(32, 166, 15)">
 R  2021-11-15
 FM HEX90
 TO QUEER HACKERS OF THE WORLD
 
-COLD BOOT (SECRET//NOFORN)
+COLD BOOT (SECRET<span class="blink">//</span>NOFORN)
 
-HEX90
-a queer hacker salon in nyc
+HEX90 &mdash; a queer hacker salon in nyc
+
+The most powerful magic of all is the power of language.
+
+Perhaps you are still becoming aware of yourself as a magician. Perhaps you can already code, but don't feel connected to the vibrating silicon enchanting your every keypress when you inscribe your intentions as spell-craft into your computer. Perhaps you don't yet know how to write the proper incantations, but already feel strangely drawn to the arcane sigils and symbols animating the metal and electric fires in your machine.
+
+We are witches, wizards, and techno-sorceresses. The shape shifters, the body-changers, the tele-mindful whose technology is humanity and connection itself. We were the original programmers, the first hackers. And now, we are returning.
+
+info<span class="blink">_</span>
+
+January 15, 2022 @ Wonderville
+1186 Broadway, Brooklyn, NY 11221
+9pm - 2am
+
+~ this venue is accessible
+~ this venue has gender-neutral restrooms
+
+# dressing up is encouraged but not required
 
 features<span class="blink">_</span>
 
@@ -83,17 +106,6 @@ featured artists<span class="blink">_</span>
 
 ~ TO BE ANNOUNCED
 
-info<span class="blink">_</span>
-
-January 15, 2022 @ Wonderville
-1186 Broadway, Brooklyn, NY 11221
-9pm - 2am
-
-~ this venue is accessible
-~ this venue has gender-neutral restrooms
-
-*dressing up is encouraged but not required*
-
 Advance cover:
 $15.00 - str8t cismen
 $10.00 - queers and femmes
@@ -102,27 +114,30 @@ At the door:
 $20.00 - str8t cismen
 $15.00 - queers and femmes
 
-The most powerful magic of all is the power of language.
-
-Perhaps you are still becoming aware of yourself as a magician. Perhaps you can already code, but don't feel connected to the vibrating silicon enchanting your every keypress when you inscribe your intentions as spell-craft into your computer. Perhaps you don't yet know how to write the proper incantations, but already feel strangely drawn to the arcane sigils and symbols animating the metal and electric fires in your machine.
-
-We are witches, wizards, and techno-sorceresses. The shape shifters, the body-changers, the tele-mindful whose technology is humanity and connection itself. We were the original programmers, the first hackers. And now, we are returning.
+/**
+ * Hex90 is an inclusive event.
+ * Door staff is instructed to respect your self-identification.
+ */
 
 NOTICE:
 This is an intentionally queer space. Consent and respect are not optional! Anyone acting shitty will be removed immediately without a refund. No amount of racism, queerphobia, transphobia, or sexism will be tolerated. This event is a celebration of queer hacking for queer hackers, not for Silicon Valley entrepreneurs, brogrammers, or BitCoin bros. Don't piss off the hackers. ;)
 
 Hex90
+
+###
+                </pre>
+            </div>
+            <p class="p-name p-summary summary">Hex90: Cold Boot (sponsored by <a href="https://techlearningcollective.com/">Tech Learning Collective</a>)</p>
+            <p class="p-location location">
+                1186 Broadway, Brooklyn, NY 11221
+                (<a href="https://wonderville.nyc/">Wonderville</a>)
+            </p>
+            <pre>
+    [ 2022-01-15 ] Starting Cold Boot service
+                   Doors: <abbr class="dt-start dtstart" title="2022-01-15T21:00:00">9pm</abbr>
+                   Until: <abbr class="dt-start dtstart" title="2022-01-16T02:00:00">2am</abbr>
             </pre>
         </div>
-        <p class="p-name p-summary summary">Hex90: Cold Boot (sponsored by <a href="https://techlearningcollective.com/">Tech Learning Collective</a>)</p>
-        <p class="p-location location">
-            1186 Broadway, Brooklyn, NY 11221
-            (<a href="https://wonderville.nyc/">Wonderville</a>)
-        </p>
-        <p>
-            Doors: <abbr class="dt-start dtstart" title="2022-01-15T21:00:00">9pm</abbr><br />
-            Until: <abbr class="dt-start dtstart" title="2022-01-16T02:00:00">2am</abbr>
-        </p>
     </div><!-- .h-event.vevent -->
 </body>
 </html>
