@@ -50,7 +50,13 @@
             e.target.setAttribute('data-puzzle', next.id);
 
             // SPECIAL FLAGS.
-            if ('curl -L https://hexninety.github.io/invitation.txt' === user_flag || 'curl https://hexninety.github.io/invitation.txt' === user_flag) {
+            if (
+                'curl -L https://hexninety.github.io/invitation.txt' === user_flag
+                ||
+                'curl https://hexninety.github.io/invitation.txt' === user_flag
+                ||
+                'wget https://hexninety.github.io/invitation.txt' === user_flag
+            ) {
                 fetch('invitation.txt')
                     .then(function (response) {
                         return response.text();
