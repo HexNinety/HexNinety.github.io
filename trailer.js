@@ -161,7 +161,7 @@
             return response.json();
         })
         .then(function (json) {
-            init(json, 0);
+            init(json, 'boot');
         });
 
     /**
