@@ -62,17 +62,15 @@
     {
         "id": "boot",
         "flag": [
-            "",
             "phreaker"
         ],
         "next": {
-            "": "login",
             "phreaker": "login"
         },
-        "text": "[    0.000000] HexNinety kernel version 0.01-experimental (buildd@lcy01-amd64-007) (gcc version 7.5.0 (Hex90 2.6.0-3hexninety1~LTS)) #170-Hex90 SMP Mon Jan 03 01:15:22 UTC 2021 (Hex90 5.15.0)\n[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.0-162-experimental root=/dev/mapper/hex90--vg-root ro\n[    0.000000] KERNEL supported cpus:\n[    0.000000]   Intel GenuineIntel\n[    0.000000]   AMD AuthenticAMD\n[    0.000000]   Centaur CentaurHauls\n[    0.000000] NX (Execute Disable) protection: active\n[    0.000001] COLD BOOTING EXPERIMENTAL ANTI-VIRAL SYSTEM\n...............................................\n[     OK     ] Started daily rotation of log files\n[     OK     ] Reached target Timers\n[     OK     ] Started Network Service\n[     OK     ] Started Modem Manager\nDialing...................................................\n..........................................................\n..........................................................\nConnecting................................................\n..........................................................\n..........................................................\n..........................................................\n..........................................................\n..........................................................\n..........................................................\n..........................................................\n..........................................................\n..........................................................\n.....................................................done.\n[     OK     ] Started Login Service.",
+        "text": "[    0.000000] HexNinety kernel version 0.01-experimental (buildd@lcy01-amd64-007) (gcc version 7.5.0 (Hex90 2.6.0-3hexninety1~LTS)) #170-Hex90 SMP Mon Jan 03 01:15:22 UTC 2021 (Hex90 5.15.0)\n[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.0-162-experimental root=/dev/mapper/hex90--vg-root ro\n[    0.000000] KERNEL supported cpus:\n[    0.000000]   Intel GenuineIntel\n[    0.000000]   AMD AuthenticAMD\n[    0.000000]   Centaur CentaurHauls\n[    0.000000] NX (Execute Disable) protection: active\n[    0.000001] COLD BOOTING EXPERIMENTAL ANTI-VIRAL SYSTEM\n.............................\n[     OK     ] Started daily rotation of log files\n[     OK     ] Reached target Timers\n[     OK     ] Started Network Service\n[     OK     ] Started Modem Manager\nDialing......................\n.............................\n.............................\n.............................\nConnecting...................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n........................done.\n[     OK     ] Started Login Service.",
         "prompt": "login: ",
-        "placeholder": "Enter `phreaker` to log in.",
-        "retry_text": ""
+        "placeholder": "(Enter username or keyword `help` for help.)",
+        "retry_text": "no such user"
     },
     {
         "id": "login",
