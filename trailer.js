@@ -95,12 +95,11 @@
 
     /**
      * Display shopping links.
+     *
+     * @todo Not yet implemented.
      */
     function showShoppingLinks () {
-        var el = document.getElementById('artfully-event');
-        document.getElementById('shopping-cart-controls').style.display = 'block';
-        el.style.display = 'block';
-        el.scrollIntoView(true);
+        // TODO: Not yet implemented.
     }
 
     /**
