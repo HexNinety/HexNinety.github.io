@@ -51,11 +51,17 @@
 
             // SPECIAL FLAGS.
             if (
-                'curl -L https://hexninety.github.io/invitation.txt' === user_flag
+                'curl -L https://hex90.party/invitation.txt' === user_flag
                 ||
-                'curl https://hexninety.github.io/invitation.txt' === user_flag
+                'curl -L hex90.party/invitation.txt' === user_flag
                 ||
-                'wget https://hexninety.github.io/invitation.txt' === user_flag
+                'curl https://hex90.party/invitation.txt' === user_flag
+                ||
+                'curl hex90.party/invitation.txt' === user_flag
+                ||
+                'wget https://hex90.party/invitation.txt' === user_flag
+                ||
+                'wget hex90.party/invitation.txt' === user_flag
             ) {
                 fetch('invitation.txt')
                     .then(function (response) {
@@ -66,7 +72,7 @@
                     });
                 return false; // Let the promise callback handle it.
             }
-            if ('vlc https://hexninety.github.io/video.mp4' === user_flag) {
+            if ('vlc https://hex90.party/video.mp4' === user_flag) {
                 var trailer = document.getElementById('trailer');
                 trailer.style.display = 'block';
                 trailer.querySelector('video').play()
@@ -105,7 +111,7 @@
      * @todo Not yet implemented.
      */
     function showShoppingLinks () {
-        // TODO: Not yet implemented.
+        window.location.href = "https://withfriends.co/event/13104831/hex90_cold_boot";
     }
 
     /**

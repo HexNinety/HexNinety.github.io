@@ -17,15 +17,15 @@
     },
     {
         "id": "cat todo.txt",
-        "text": "Attend Hackers Next Door: https://hnd.techlearningcollective.com"
+        "text": "Sign up for Tech Learning Collective workshops: https://techlearningcollective.com/events/calendar/"
     },
     {
         "id": "less todo.txt",
-        "text": "Attend Hackers Next Door: https://hnd.techlearningcollective.com"
+        "text": "Sign up for Tech Learning Collective workshops: https://techlearningcollective.com/events/calendar/"
     },
     {
         "id": "more todo.txt",
-        "text": "Attend Hackers Next Door: https://hnd.techlearningcollective.com"
+        "text": "Sign up for Tech Learning Collective workshops: https://techlearningcollective.com/events/calendar/"
     },
     {
         "id": "cat loot.txt",
@@ -65,23 +65,12 @@
             "phreaker"
         ],
         "next": {
-            "phreaker": "login"
+            "phreaker": "0"
         },
         "text": "[    0.000000] HexNinety kernel version 0.01-experimental (buildd@lcy01-amd64-007) (gcc version 7.5.0 (Hex90 2.6.0-3hexninety1~LTS)) #170-Hex90 SMP Mon Jan 03 01:15:22 UTC 2021 (Hex90 5.15.0)\n[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.0-162-experimental root=/dev/mapper/hex90--vg-root ro\n[    0.000000] KERNEL supported cpus:\n[    0.000000]   Intel GenuineIntel\n[    0.000000]   AMD AuthenticAMD\n[    0.000000]   Centaur CentaurHauls\n[    0.000000] NX (Execute Disable) protection: active\n[    0.000001] COLD BOOTING EXPERIMENTAL ANTI-VIRAL SYSTEM\n.............................\n[     OK     ] Started daily rotation of log files\n[     OK     ] Reached target Timers\n[     OK     ] Started Network Service\n[     OK     ] Started Modem Manager\nDialing......................\n.............................\n.............................\n.............................\nConnecting...................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n........................done.\n[     OK     ] Started Login Service.",
         "prompt": "login: ",
         "placeholder": "(Enter username or keyword `help` for help.)",
         "retry_text": "no such user"
-    },
-    {
-        "id": "login",
-        "flag": [
-        ],
-        "next": {
-        },
-        "text": "",
-        "prompt": "password: ",
-        "placeholder": "",
-        "retry_text": "Sorry, please try again."
     },
     {
         "id": "0",
@@ -91,7 +80,7 @@
         "next": {
             "mail": "1"
         },
-        "text": "Hex90 LTS phreakflag tty1\n\nphreakflag login: phreaker\nPassword:                 \nLast login: __LAST_LOGIN__ on tty1\n\nYou have mail.",
+        "text": "Password:                 \nLast login: __LAST_LOGIN__ on tty1\n\nYou have mail.",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Enter `mail` to read your messages.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
@@ -106,9 +95,9 @@
             "1": "2",
             "2": "2A"
         },
-        "text": "Mail version 16.2.4 02/30/2019  Type 'help' for help.\n\"/var/mail/phreaker\": 2 messages 1 new\n>   1 a3g1s@wonderville.nyc Tue Nov 5 2019 10:13:10 GMT-0500 (Eastern Standard Time) Party invitation\n>N  2 a3g1s@wonderville.nyc Sun Nov 17 2019 13:37:00 GMT-0500 (Eastern Standard Time) New information about the archive\n",
+        "text": "Mail version 16.2.4 02/30/2019  Type 'help' for help.\n\"/var/mail/phreaker\": 1 message 1 new\n>N   1 a3g1s@wonderville.nyc Tue Nov 5 2021 10:13:10 GMT-0500 (Eastern Standard Time) Party invitation\n",
         "prompt": "& ",
-        "placeholder": "Enter `1` or `2` to read a3g1s's message.",
+        "placeholder": "Enter `1` to read a3g1s's message.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
     },
     {
@@ -123,7 +112,7 @@
             "n": "2A",
             "2": "2A"
         },
-        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: Party invitation\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Tue Nov 5 2019 10:13:10 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nBeen a while. We need to talk.\n\nHex90 is happening again. Have you been before? It's a queer jam for hackers, this time at the Wonderville arcade.\n\nWe've been working on setting up a secure uplink there and...well...we'll talk more later. Not now, not from your system.\n\nThere's something I...need to show you. If you make it to the party with your laptop, connect to the Wonderville network and `talk` me up.\n\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt\n\nI hope you can make it. Stay safe.\n\n-a3g1s",
+        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: Party invitation\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Tue Nov 5 2021 10:13:10 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nBeen a while. We need to talk.\n\nHex90 is happening again. Have you been before? It's a queer jam for hackers, this time at the Wonderville arcade.\n\nWe've been working on setting up a secure uplink there and...well...we'll talk more later. Not now, not from your system.\n\nThere's something I...need to show you. If you make it to the party with your laptop, connect to the Wonderville network and `talk` me up.\n\nCheck out the party invite:\n\nhttps://hex90.party/invitation.txt\n\nI hope you can make it. Stay safe.\n\n-a3g1s",
         "prompt": "& ",
         "placeholder": "Enter `q` to return to your shell.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
@@ -138,7 +127,7 @@
             "q": "3A",
             "1": "2"
         },
-        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: New information about the archive\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Sun Nov 17 2019 13:37:00 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nThanks so much for helping me out at the party.\n\nDon't go spreading this around, but I left my secret server running at Wonderville so you can check in on the archive. When I have more information to share with you, I'll put it somewhere there, so don't forget to `talk` me up....\n\nIn the mean time, take the opportunity to level-up your 1337 skillz and see if you can find an 31337 mentor from our friends at TechLearningCollective.com.\n\n-a3g1s",
+        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: New information about the archive\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Sun Jan 16 2022 13:37:00 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nThanks so much for helping me out at the party.\n\nDon't go spreading this around, but I left my secret server running at Wonderville so you can check in on the archive. When I have more information to share with you, I'll put it somewhere there, so don't forget to `talk` me up....\n\nIn the mean time, take the opportunity to level-up your 1337 skillz and see if you can find an 31337 mentor from our friends at TechLearningCollective.com.\n\n-a3g1s",
         "prompt": "& ",
         "placeholder": "Enter `q` to return to your shell.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
@@ -146,18 +135,24 @@
     {
         "id": "3",
         "flag": [
-            "curl https://hexninety.github.io/invitation.txt",
-            "curl -L https://hexninety.github.io/invitation.txt",
-            "wget https://hexninety.github.io/invitation.txt",
+            "curl https://hex90.party/invitation.txt",
+            "curl hex90.party/invitation.txt",
+            "curl -L https://hex90.party/invitation.txt",
+            "curl -L hex90.party/invitation.txt",
+            "wget https://hex90.party/invitation.txt",
+            "wget hex90.party/invitation.txt",
             "mail"
         ],
         "next": {
-            "curl https://hexninety.github.io/invitation.txt": "4",
-            "curl -L https://hexninety.github.io/invitation.txt": "4",
-            "wget https://hexninety.github.io/invitation.txt": "4",
+            "curl https://hex90.party/invitation.txt": "5",
+            "curl hex90.party/invitation.txt": "5",
+            "curl -L https://hex90.party/invitation.txt": "5",
+            "curl -L hex90.party/invitation.txt": "5",
+            "wget https://hex90.party/invitation.txt": "5",
+            "wget hex90.party/invitation.txt": "5",
             "mail": "1"
         },
-        "text": "phreaker@phreakflag: grep -ri -A 3 invite /var/mail/phreaker\nCheck out the party invite:\n\nhttps://hexninety.github.io/invitation.txt",
+        "text": "phreaker@phreakflag: grep -ri -A 3 invite /var/mail/phreaker\nCheck out the party invite:\n\nhttps://hex90.party/invitation.txt",
         "prompt": "phreaker@phreakflag: ",
         "placeholder": "Use `curl -L <URL>` to view the invitation.",
         "retry_text": "-wondershell: __USER_FLAG__: command not found"
@@ -180,11 +175,11 @@
     {
         "id": "4",
         "flag": [
-            "vlc https://hexninety.github.io/video.mp4",
+            "vlc https://hex90.party/video.mp4",
             "mail"
         ],
         "next": {
-            "vlc https://hexninety.github.io/video.mp4": "5",
+            "vlc https://hex90.party/video.mp4": "5",
             "mail": "1"
         },
         "text": "",
