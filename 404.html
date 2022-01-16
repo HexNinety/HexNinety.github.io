@@ -6,6 +6,103 @@
     <title>404 Not Found (Hex90)</title>
 
     <link rel="stylesheet" href="style.css" />
+<style>
+html,
+body {
+    margin: 0;
+    border: none;
+    padding: 0;
+    background-color: #0e0e12;
+    font: 16px/1.25em monospace;
+    color: rgb(32, 166, 15);
+}
+
+/**
+ * @group "Splash" page.
+ */
+.moving-clouds {
+    background-image: url("/static/img/clouds.3c700c13.png");
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 250.625em;
+    height: 43.75em;
+    animation: cloudLoop 80s linear infinite;
+}
+@keyframes cloudLoop {
+    0% {
+        transform: translateZ(0);
+    }
+    100% {
+        transform: translate3d(-50%,0,0);
+    }
+}
+.page-header {
+    background-image: url('/static/img/hex.26174f99.webp');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.page-header main {
+    padding-top: 300px;
+    text-align: center;
+}
+.title-brand {
+    max-width: 790px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    display: block;
+}
+.title-brand h1 {
+    font-size: 5em;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    background: #fbf8ec;
+    background: linear-gradient(180deg,#fff 35%,#4e6773);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2em;
+}
+.fog-low {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: -35%;
+    margin-bottom: -50px;
+    width: 110%;
+    opacity: .85;
+}
+.fog-low img {
+    width: 100%;
+}
+.fog-low.right {
+    margin-left: 30%;
+    opacity: 1;
+}
+.page-header h2,
+.page-header p {
+    font-size: 1.7em;
+    color: #fff;
+}
+
+.page-header #filter::after {
+    background-color: rgba(0,0,0,.5);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+</style>
 
     <link rel="shortcut icon" href="static/img/bg.jpg" />
 
