@@ -1,0 +1,5 @@
+@media (max-width: 399px) {
+    #notificationPanelContainer > calendar_container {
+        display: none;
+    }
+}
