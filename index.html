@@ -18,125 +18,8 @@ ul {
     padding: 0;
 }
 
-/**
- * @group Typography.
- */
-:root {
-    --callout-text: #5afd96;
-}
-@font-face {
-    font-family: "MonoSpatial";
-    src: url("static/fonts/MonoSpatial.ttf");
-}
-@font-face {
-    font-family: "NEON CLUB MUSIC Medium";
-    src: url("static/fonts/NEON CLUB MUSIC_medium.otf");
-}
-body {
-    font-family: "MonoSpatial";
-    text-transform: lowercase;
-    color: #FFF;
-}
-a {
-    color: var(--callout-text);
-}
-ul {
-    list-style-type: "~ ";
-}
-abbr.initialism {
-    text-transform: uppercase;
-}
-
-header h1 {
-    font: 130px/130px "NEON CLUB MUSIC Medium";
-    color: var(--callout-text);
-}
-header p {
-    margin: 0;
-    padding: 0;
-    font-size: 35px;
-    font-style: italic;
-    letter-spacing: 3px;
-    color: #dcb4fd;
-}
-section h2 {
-    margin-bottom: 1em;
-}
-@keyframes blink-text {
-    from, to { color: transparent; }
-    50% { color: inherit; }
-}
-section h2::after {
-    content: "_";
-    animation: blink-text .75s step-end infinite;
-}
-footer {
-    font-style: italic;
-}
-
-#waiting-loader {
-    text-transform: uppercase;
-    word-break: break-all;
-    color: var(--callout-text);
-}
-#waiting-loader::after {
-    content: "…";
-    animation: blink-text .75s step-end infinite;
-}
-
-/**
- * @group Backgrounds.
- */
-body {
-    background: #b350ff fixed url("static/img/bg.png") bottom left / auto no-repeat;
-}
-
-/**
- * @group Layout.
- */
-body {
-    padding: 3em 2em 2em 2em;
-}
-header {
-    position: fixed;
-}
-video {
-    margin: 2em 0 0 0;
-    max-width: 550px;
-}
-main {
-    margin-left: 600px;
-}
-section {
-    margin: 0 0 2em;
-}
-
-/**
- * @group Mobile.
- */
-@media screen and (max-width: 750px) {
-    header {
-        position: static;
-    }
-    header h1 {
-        font-size: 64px;
-        line-height: normal;
-    }
-    header p {
-        font-size: 15px;
-    }
-    video {
-        max-width: 100%;
-    }
-    main {
-        margin-left: 0;
-    }
-    section {
-        margin-top: 3em;
-    }
-    body {
-        background-size: contain;
-    }
+html, body {
+    background: #000;
 }
 </style>
     <meta property="og:url" content="https://hex90.party/" />
@@ -154,76 +37,16 @@ section {
     <header>
         <h1>Hex90</h1>
         <p>A queer hacker salon in NYC</p>
-        <video id="sizzle-reel" controls="controls"
-             src="static/vid/They%27re%20Called%20Hackers.mp4"
-             poster="static/img/poster.transparent.access-granted.png"
-             data-videos='[
-                 {
-                     "src": "static/vid/They%27re%20Called%20Hackers.mp4",
-                     "poster": "static/img/poster.transparent.access-granted.png"
-                 },
-                 {
-                     "src": "static/vid/Prince%20giving%20advice%20about%20Internet.mp4",
-                     "poster": "static/img/poster.transparent.prince.png"
-                 },
-                 {
-                     "src": "static/vid/Most%20guys%20do.mp4",
-                     "poster": "static/img/poster.nyancat.jpg"
-                 },
-                 {
-                     "src": "static/vid/hackersoftheworldunite.mp4",
-                     "poster": "static/img/poster.transparent.hackers-1995.jpg"
-                 },
-                 {
-                     "src": "static/vid/untitled-protests.mp4",
-                     "poster": "static/img/poster.transparent.motherboard.png"
-                 },
-                 {
-                     "src": "static/vid/RISC%20is%20good.mp4",
-                     "poster": "static/img/poster.white.circle-a-equation-graph.png"
-                 },
-                 {
-                     "src": "static/vid/elaine-the-hacker.mp4",
-                     "poster": "static/img/poster.transparent.matrix-trinity.png"
-                 },
-                 {
-                     "src": "static/vid/Characteristics%20of%20a%20Computer%20Criminal.mp4",
-                     "poster": "static/img/poster.transparent.hacked-text.png"
-                 },
-                 {
-                     "src": "static/vid/This%20is%20what%20we%20do.mp4",
-                     "poster": "static/img/poster.black.white-rabbit-code.jpg"
-                 },
-                 {
-                     "src": "static/vid/Hex90%20-%20Hello%2C%20friend.mp4",
-                     "poster": "static/img/poster.gray.loading.png"
-                 }
-             ]'
-        >
-            <p><a href="static/vid/They%27re%20Called%20Hackers.mp4">Watch the video</a>.</p>
-        </video>
-        <p style="font-size: 12px;">Hex90 is brought to you by <a style="text-transform: capitalize;" href="https://techlearningcollective.com/">Tech Learning Collective</a> and friends.</p>
     </header>
-    <div class="h-event vevent"><main><div class="p-description description">
-        <section id="next-party">
-            <h2 class="p-name p-summary summary">Scanning for next party info</h2>
-            <p id="waiting-loader"></p>
-            <script>
-                (function () {
-                    function dotdotdot (el) {
-                        var str = Math.random().toString(16).substring(2, 3);
-                        el.innerHTML = el.textContent + str;
-                        setTimeout(dotdotdot, 500, el);
-                    }
-                    var el = document.getElementById('waiting-loader');
-                    dotdotdot(el);
-                })()
-            </script>
-        </section>
-        <footer>
-            <p>These parties are not exclusionary, but they are an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately without a refund. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. The str8s are welcome as long as they don't piss off the hackers. ;)</p>
-        </footer>
-    </div></main></div><!-- .h-event.vevent -->
+        <video id="sizzle-reel" controls="controls" width="100%"
+             src="static/vid/hex90-transposition-trailer.mp4"
+        >
+            <p><a href="hex90-transposition-trailer.mp4">Watch the Hex90: Transposition trailer</a>.</p>
+        </video>
+    <footer>
+        <p>Music: <a href="https://www.youtube.com/watch?v=eD2-HcJNlbs">Black Hole Sun by Anatomy</a>.</p>
+        <p style="font-size: 12px;">Hex90 is brought to you by <a style="text-transform: capitalize;" href="https://techlearningcollective.com/">Tech Learning Collective</a> and friends.</p>
+    </footer>
     <script src="static/js/main.js"></script>
 </body>
 </html>

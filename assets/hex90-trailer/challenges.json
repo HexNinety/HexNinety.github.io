@@ -1,0 +1,220 @@
+[
+    {
+        "id": "commands",
+        "flag": [
+            "cat todo.txt",
+            "less todo.txt",
+            "more todo.txt",
+            "cat loot.txt",
+            "date",
+            "help",
+            "hostname",
+            "ls",
+            "pwd",
+            "uname",
+            "whoami"
+        ]
+    },
+    {
+        "id": "cat todo.txt",
+        "text": "Sign up for Tech Learning Collective workshops: https://techlearningcollective.com/events/calendar/"
+    },
+    {
+        "id": "less todo.txt",
+        "text": "Sign up for Tech Learning Collective workshops: https://techlearningcollective.com/events/calendar/"
+    },
+    {
+        "id": "more todo.txt",
+        "text": "Sign up for Tech Learning Collective workshops: https://techlearningcollective.com/events/calendar/"
+    },
+    {
+        "id": "cat loot.txt",
+        "text": "root:$6$7FLeaj/J$qx1C9gxzI41bRsHG9n4.bR5A/kRYwdrkAL/.d/uhNaPA1Pq6glaln2wZE/Xu9mSjmoJRVY/bscpTJvolQyiMT0:16902:0:99999:7:::\nlp:*:16902:0:99999:7:::\ntyrellwellick:$6$ge7W6aVQ$dhJxmLt2qD964d8GXD7Z53EkxxKfe08LVRBNVZ5Xbg.YXXwgIagzJ9bRB.QUcgvOsdrhitXsTf0MbGY7S1sH60:17239:0:99999:7:::\nteddieboyle:$6$nwL1Y8H.$if6YD8CYUkdgn9WQpimlb89JlisnSs.VjQ8ii6jwJxFw3UFzjrBNPhyzCOqVRClGyFniwd.1.YvpnomGVfJ0p/:17253:0:99999:7:::\npaulwiener:$6$PIbEzrsm$Xf5cGvoDiv11E2QEsBePC10lLb0sXGfClFf2qDp9BQuT3LKpyOf6Jg/0wgD2FAfKZ6Jn2LAKkZ3ML6q87zpb50:17228:0:99999:7:::\nstevereeves:$6$Vw9JLbnK$IjbjiS.QtwMt1ath3EX2nN1LsbtYS9lqGT.dre/a0U28gOTRSbDssl6iszw5xhpVwxHOhLAzLBCTp/IGXogQX1:17239:0:99999:7:::\nchrispollard:$6$/Awg41Ec$88KRSf.ARqcEfm8lfvjbNH7CpgkhRMtsqmkV/2XYeyRLp4yMvLhdrFIN7ooqux98UtAHiWduyOFu82ktCivp40:17214:0:99999:7:::\nandrepaczos:$6$PPb/lV4P$47WSXFCGpNcc4I8NbIsfo5Uu5OSpLRS1QokvbFV7D16MNrlebV0k6grYa6e/BVpLevlA2UfpH1nSIUmB5p//E0:17184:0:99999:7:::\nsusanross:$6$oQojwHxy$6d6w0BIvgiwdWymrJDUi9CUWrhQqBT1U8ZZUyo0Y849LdoJ/Kxpcj7pcNjk/KETGXAZ88YKprqkKF9Se2Opq70:17209:0:99999:7:::\njanetcleveland:$6$rpMncc8V$.m5U3nVXBmHf9o1XATY0j4yi4M9leCFyLgZgfmUmZHZnZy3wveiJ95oP5jFgDFchn0meyAthbgEMru4.t/U2o0:17205:0:99999:7:::\ntorapeterson:$6$FJ/Gpj1/$RKjPXkR.9P1YmPBcwX6J2oPzDgzvp3YYbRWM71ymC7bZ9ho/aM.yjx40l1t9mKRMy8D8ahrpGZ5trzvfL.wqU1:17211:0:99999:7:::\npeterdunbar:$6$TXMvNoEX$8iRdFsBIhJSyqGU1SXBpbHj2LkjdOTnTQ33z3WarGJQkvKL9qFzp0./ciBLxPa7OjMKSZyuPejqeJ/ds28s9y.:17239:0:99999:7:::\nmikesime:$6$4OiuDNCl$y7uO8ih3tZefivnwxgUfrYPr536UZlrjcL8.ctJB7lJhWx682uGdDCPVogObgYtCRuZ.isUBcKXgl.Uop4dTy1:17218:0:99999:7:::\nderekstenborg:$6$7qUlkKeZ$lN6/b7r5VCZO7fu7Mkm2/GBrimKUbFFMedsQIoaCRFFv2pnRGZjxzo0UP0Fuw1qBMJ4f2tM4t.Z2b4kS/Tbf4/:17242:0:99999:7:::\nvanessaweiss:$6$pdbSoZ2v$e28VhvMoIwW989bAxh42.pzIeDVuLu7WCHsRkvAUDrVG87qvahZZmvK1.2Q/JJXun14XXTlKciUmPO6xBL6fO0:17245:0:99999:7:::\nmalaikajohnson:$6$CmTN18x8$.oTUOf6DhjVLUsvECOriEGOBJgBRgrhXfNMNzmzkBgClS9xs8t7jTlmx8teZMGLNIzMqQRGHz/iA8j4TjHT5a/:17197:0:99999:7:::\njohnlittlejars:$6$Mh5Ab5AO$cPhWikERd8JrHSMtNXrECwKRt/INs4OpRijbezwhvPR4WxcG5OzDOJma5AKQVY.6WVFxWz0/HxFikBdu8TRQk0:17218:0:99999:7:::\njeffpanessa:$6$ycp7dadC$FphgZOcdzgwwBjy/c9V4e9sKIO5J5X94eaQI0t1W92Q/qLGPOJiOZ03Yd.vL.qWjO4C.iCd1Zgd1hKwGuJf6S1:17240:0:99999:7:::\naliciaoldham:$6$zReqBwn4$DbAIWgoj3NPYp9CR7JaF1VltlMcXKka7jfJdt9Y5QeltA2hWv2ML9MCZQ9LisNDf/WvPT9ergEYfa2qKSjmIY0:17208:0:99999:7:::\n"
+    },
+    {
+        "id": "date",
+        "text": "__NOW__"
+    },
+    {
+        "id": "help",
+        "text": "COMMAND LISTING:\n\ndate\t\tdisplay date and time\n\nhelp\t\tDisplay builtin commands. (this screen)\n\nhostname\tprint name of the current host system\n\nuname\t\tPrint operating system name\n\nwhoami\t\tdisplay effective user id"
+    },
+    {
+        "id": "hostname",
+        "text": "phreakflag"
+    },
+    {
+        "id": "ls",
+        "text": "Desktop\nDocuments\nDownloads\nOnionShare\nbin\nsrc\ntmp\ntodo.txt\nloot.txt"
+    },
+    {
+        "id": "pwd",
+        "text": "/home/phreaker"
+    },
+    {
+        "id": "uname",
+        "text": "0x90 LTS (GNU/Linux 5.15-generic x86_64)"
+    },
+    {
+        "id": "whoami",
+        "text": "phreaker"
+    },
+    {
+        "id": "boot",
+        "flag": [
+            "phreaker"
+        ],
+        "next": {
+            "phreaker": "0"
+        },
+        "text": "[    0.000000] HexNinety kernel version 0.01-experimental (buildd@lcy01-amd64-007) (gcc version 7.5.0 (Hex90 2.6.0-3hexninety1~LTS)) #170-Hex90 SMP Mon Jan 03 01:15:22 UTC 2021 (Hex90 5.15.0)\n[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.0-162-experimental root=/dev/mapper/hex90--vg-root ro\n[    0.000000] KERNEL supported cpus:\n[    0.000000]   Intel GenuineIntel\n[    0.000000]   AMD AuthenticAMD\n[    0.000000]   Centaur CentaurHauls\n[    0.000000] NX (Execute Disable) protection: active\n[    0.000001] COLD BOOTING EXPERIMENTAL ANTI-VIRAL SYSTEM\n.............................\n[     OK     ] Started daily rotation of log files\n[     OK     ] Reached target Timers\n[     OK     ] Started Network Service\n[     OK     ] Started Modem Manager\nDialing......................\n.............................\n.............................\n.............................\nConnecting...................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n.............................\n........................done.\n[     OK     ] Started Login Service.",
+        "prompt": "login: ",
+        "placeholder": "(Enter username or keyword `help` for help.)",
+        "retry_text": "no such user"
+    },
+    {
+        "id": "0",
+        "flag": [
+            "mail"
+        ],
+        "next": {
+            "mail": "1"
+        },
+        "text": "Password:                 \nLast login: __LAST_LOGIN__ on tty1\n\nYou have mail.",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Enter `mail` to read your messages.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "1",
+        "flag": [
+            "1",
+            "2"
+        ],
+        "next": {
+            "1": "2",
+            "2": "2A"
+        },
+        "text": "Mail version 16.2.4 02/30/2019  Type 'help' for help.\n\"/var/mail/phreaker\": 1 message 1 new\n>N   1 a3g1s@wonderville.nyc Tue Nov 5 2021 10:13:10 GMT-0500 (Eastern Standard Time) Party invitation\n",
+        "prompt": "& ",
+        "placeholder": "Enter `1` to read a3g1s's message.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "2",
+        "flag": [
+            "q",
+            "n",
+            "2"
+        ],
+        "next": {
+            "q": "3",
+            "n": "2A",
+            "2": "2A"
+        },
+        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: Party invitation\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Tue Nov 5 2021 10:13:10 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nBeen a while. We need to talk.\n\nHex90 is happening again. Have you been before? It's a queer jam for hackers, this time at the Wonderville arcade.\n\nWe've been working on setting up a secure uplink there and...well...we'll talk more later. Not now, not from your system.\n\nThere's something I...need to show you. If you make it to the party with your laptop, connect to the Wonderville network and `talk` me up.\n\nCheck out the party invite:\n\nhttps://hex90.party/invitation.txt\n\nI hope you can make it. Stay safe.\n\n-a3g1s",
+        "prompt": "& ",
+        "placeholder": "Enter `q` to return to your shell.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "2A",
+        "flag": [
+            "1",
+            "q"
+        ],
+        "next": {
+            "q": "3A",
+            "1": "2"
+        },
+        "text": "From a3g1s@wonderville.nyc\nX-Original-To: phreaker@phreakflag.onion\nTo: phreaker@phreakflag.onion\nSubject: New information about the archive\nMIME-Version: 1.0\nContent-Type: text/plain; charset=\"UTF-8\"\nContent-Transfer-Encoding: 8bit\nDate: Sun Jan 16 2022 13:37:00 GMT-0500 (Eastern Standard Time)\nFrom: a3g1s@wonderville.nyc\n\nHey,\n\nThanks so much for helping me out at the party.\n\nDon't go spreading this around, but I left my secret server running at Wonderville so you can check in on the archive. When I have more information to share with you, I'll put it somewhere there, so don't forget to `talk` me up....\n\nIn the mean time, take the opportunity to level-up your 1337 skillz and see if you can find an 31337 mentor from our friends at TechLearningCollective.com.\n\n-a3g1s",
+        "prompt": "& ",
+        "placeholder": "Enter `q` to return to your shell.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "3",
+        "flag": [
+            "curl https://hex90.party/invitation.txt",
+            "curl hex90.party/invitation.txt",
+            "curl -L https://hex90.party/invitation.txt",
+            "curl -L hex90.party/invitation.txt",
+            "wget https://hex90.party/invitation.txt",
+            "wget hex90.party/invitation.txt",
+            "mail"
+        ],
+        "next": {
+            "curl https://hex90.party/invitation.txt": "5",
+            "curl hex90.party/invitation.txt": "5",
+            "curl -L https://hex90.party/invitation.txt": "5",
+            "curl -L hex90.party/invitation.txt": "5",
+            "wget https://hex90.party/invitation.txt": "5",
+            "wget hex90.party/invitation.txt": "5",
+            "mail": "1"
+        },
+        "text": "phreaker@phreakflag: grep -ri -A 3 invite /var/mail/phreaker\nCheck out the party invite:\n\nhttps://hex90.party/invitation.txt",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `curl -L <URL>` to view the invitation.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "3A",
+        "flag": [
+            "links techlearningcollective.com",
+            "mail"
+        ],
+        "next": {
+            "links techlearningcollective.com": "6",
+            "mail": "1"
+        },
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `links techlearningcollective.com` to start leveling-up your skillz.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "4",
+        "flag": [
+            "vlc https://hex90.party/video.mp4",
+            "mail"
+        ],
+        "next": {
+            "vlc https://hex90.party/video.mp4": "5",
+            "mail": "1"
+        },
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `vlc <URL>` to watch the video.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "5",
+        "flag": [
+            "links",
+            "mail"
+        ],
+        "next": {
+            "links": "6",
+            "mail": "1"
+        },
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Use `links` to get your ticket.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    },
+    {
+        "id": "6",
+        "flag": [
+            "",
+            "mail"
+        ],
+        "next": {
+            "": "6",
+            "mail": "1"
+        },
+        "text": "",
+        "prompt": "phreaker@phreakflag: ",
+        "placeholder": "Enter `help` for help.",
+        "retry_text": "-wondershell: __USER_FLAG__: command not found"
+    }
+]
