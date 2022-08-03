@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hex90: Promiscuous Mode</title>
+    <link rel="stylesheet" href="node_modules/@validide/resizable-table-columns/dist/css/resizable-table-columns.min.css" />
 <style>
 /**
  * @group Reset.
@@ -212,7 +213,8 @@ A rainbow has 7 colors in this order:
     </header>
 
     <main>
-        <table id="packet-list">
+        <table id="packet-list" data-rtc-resizable-table="table.one">
+            <!--
             <colgroup>
                 <col class="packet-number" />
                 <col class="packet-time" />
@@ -222,15 +224,25 @@ A rainbow has 7 colors in this order:
                 <col class="packet-length" />
                 <col class="packet-info" />
             </colgroup>
+            -->
             <thead>
                 <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Source</th>
-                    <th scope="col">Destination</th>
-                    <th scope="col">Protocol</th>
-                    <th scope="col">Length</th>
-                    <th scope="col">Info</th>
+                    <!--
+                    <th scope="col" data-rtc-resizable="no">No.</th>
+                    <th scope="col" data-rtc-resizable="time">Time</th>
+                    <th scope="col" data-rtc-resizable="source">Source</th>
+                    <th scope="col" data-rtc-resizable="destination">Destination</th>
+                    <th scope="col" data-rtc-resizable="protocol">Protocol</th>
+                    <th scope="col" data-rtc-resizable="length">Length</th>
+                    <th scope="col" data-rtc-resizable="info">Info</th>
+                    -->
+                    <th data-rtc-resizable="no">No.</th>
+                    <th data-rtc-resizable="time">Time</th>
+                    <th data-rtc-resizable="source">Source</th>
+                    <th data-rtc-resizable="destination">Destination</th>
+                    <th data-rtc-resizable="protocol">Protocol</th>
+                    <th data-rtc-resizable="length">Length</th>
+                    <th data-rtc-resizable="info">Info</th>
                 </tr>
             </thead>
             <tbody>
@@ -252,6 +264,7 @@ A rainbow has 7 colors in this order:
     <footer>
         <!-- TODO: Export and wrap up options? -->
     </footer>
+    <script src="node_modules/@validide/resizable-table-columns/dist/js/bundle/index.min.js"></script>
     <script>
 (function () {
     /**
@@ -272,6 +285,8 @@ A rainbow has 7 colors in this order:
     function stepToPacketList () {
         document.body.classList.remove('viewstep-capture-filter');
         document.body.classList.add('viewstep-packet-list');
+
+        new validide_resizableTableColumns.ResizableTableColumns(document.getElementById('packet-list'), null);
 
         // Count the packets we add.
         var num_packet = 1; // Start at 1, not 0.
