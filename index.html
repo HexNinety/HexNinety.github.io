@@ -13,6 +13,11 @@
 }
 @font-face { font-family: "NEON CLUB MUSIC Medium"; src: url("static/fonts/NEON CLUB MUSIC_medium.otf"); }
 @font-face { font-family: "MonoSpatial"; src: url("static/fonts/MonoSpatial.ttf"); }
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 25%; }
+    100% { background-position: 0% 50%; }
+}
 
 /**
  * @group Main styles.
@@ -51,6 +56,24 @@ main pre {
     font-size: larger;
     white-space: pre-wrap;
 }
+.start-hacking-now {
+    font-family: Monospace;
+}
+.start-hacking-now a {
+    text-decoration: none;
+    background-image: repeating-linear-gradient(70deg, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    background-size: 800% 800%;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation: rainbow 3s ease infinite;
+}
+.start-hacking-now img {
+    vertical-align: sub;
+}
+.start-hacking-now img:hover {
+    box-shadow: none;
+}
 footer {
     font-size: small;
     font-family: Monospatial, Monospace; 
@@ -61,7 +84,12 @@ footer {
     <header>
         <h1>Hex90: Promiscuous Mode</h1>
         <h2>A queer hacker salon</h2>
+
+        <p class="start-hacking-now"><a href="promiscuous-mode.html">Click here to start hacking now &rarr; <img src="static/img/logo.wireshark.transparent.512x512.png" alt="Wireshark logo" width="50px" /></a></p>
+
         <p id="Heroine"><a href="https://www.wonderville.nyc/events/hex90-promiscuous-mode" title="Venue web site for 'Hex90: Promiscuous Mode'"><img alt="Banner for Hex90: Promiscuous Mode party shows a rainbow colored starry sky with a bright rainbow arcing across a half-translucent planetary body or small moon." src="static/img/hex90-promiscuous-mode.jpg" /></a></p>
+
+        <p class="start-hacking-now"><a href="promiscuous-mode.html">Click here to start hacking now &rarr; <img src="static/img/logo.wireshark.transparent.512x512.png" alt="Wireshark logo" width="50px" /></a></p>
     </header>
     <main>
         <pre>
