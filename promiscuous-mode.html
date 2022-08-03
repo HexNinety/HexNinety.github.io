@@ -236,7 +236,7 @@ A rainbow has 7 colors in this order:
             <tbody>
             </tbody>
         </table>
-        <template id="packet-row">
+        <template id="packet-row-http" class="packet-row">
             <tr>
                 <td class="packet-number">#</td>
                 <td class="packet-time">2022-05-15 19:23:15.202095</td>
@@ -272,9 +272,14 @@ A rainbow has 7 colors in this order:
     function stepToPacketList () {
         document.body.classList.remove('viewstep-capture-filter');
         document.body.classList.add('viewstep-packet-list');
+
+        // Count the packets we add.
+        var num_packet = 1; // Start at 1, not 0.
+
         // TODO: Set limit for when to clear interval ID.
         var interval_id = setInterval(function () {
-            addPacketRow();
+            addPacketRow(num_packet, 'http'); // TODO: Variablize the protocol being simulated.
+            num_packet++;
         }, 50);
         setTimeout(function () {
             clearInterval(interval_id);
@@ -283,10 +288,14 @@ A rainbow has 7 colors in this order:
 
     /**
      * Adds a row to the packet list.
+     *
+     * @param {Number} packet_number
+       @param {string} protocol
      */
-    function addPacketRow () {
-        var tpl = document.getElementById('packet-row');
+    function addPacketRow (packet_number, protocol) {
+        var tpl = document.getElementById(`packet-row-${protocol}`);
         var row = tpl.content.cloneNode(true);
+        row.querySelector('.packet-number').textContent = packet_number.toString();
         var tbl = document.getElementById('packet-list').querySelector('tbody');
         tbl.appendChild(row);
     }
