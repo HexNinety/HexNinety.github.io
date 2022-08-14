@@ -3,186 +3,227 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hex90: Promiscuous Mode &mdash; August 13, 2022</title>
-    <style>
+    <title>hex90</title>
+<style>
 /**
- * Variables and asset definitions.
- */ 
-:root {
-      --callout-text: #5afd96;
-}
-@font-face { font-family: "NEON CLUB MUSIC Medium"; src: url("static/fonts/NEON CLUB MUSIC_medium.otf"); }
-@font-face { font-family: "MonoSpatial"; src: url("static/fonts/MonoSpatial.ttf"); }
-@keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 25%; }
-    100% { background-position: 0% 50%; }
-}
-
-/**
- * @group Main styles.
+ * @group Reset.
  */
-html, body {
+html,
+body,
+h1,
+h2,
+ul {
     margin: 0;
     border: none;
     padding: 0;
 }
-body {
-    padding: 0 20px 50px;
-    background: #b350ff fixed url("static/img/computer.png") bottom left / auto no-repeat;
-    color: white;
+
+/**
+ * @group Typography.
+ */
+:root {
+    --callout-text: #5afd96;
 }
-a, a:link,
-header {
+@font-face {
+    font-family: "MonoSpatial";
+    src: url("static/fonts/MonoSpatial.ttf");
+}
+@font-face {
+    font-family: "NEON CLUB MUSIC Medium";
+    src: url("static/fonts/NEON CLUB MUSIC_medium.otf");
+}
+body {
+    font-family: "MonoSpatial";
+    text-transform: lowercase;
+    color: #FFF;
+}
+a {
     color: var(--callout-text);
 }
-header {
-    font: x-large "NEON CLUB MUSIC Medium";
-    text-align: center;
+ul {
+    list-style-type: "~ ";
 }
-#Heroine {
-    padding: 30px;
+abbr.initialism {
+    text-transform: uppercase;
 }
-header img {
-    transition: transform 1s, box-shadow 1s;
-    border-radius: 10px;
-    max-width: 100%;
+
+header h1 {
+    font: 130px/130px "NEON CLUB MUSIC Medium";
+    color: var(--callout-text);
 }
-header img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px 25px var(--callout-text);
+header p {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: #dcb4fd;
 }
-main pre {
-    font-size: larger;
-    white-space: pre-wrap;
+section h2 {
+    margin-bottom: 1em;
 }
-.start-hacking-now {
-    font-family: Monospace;
+@keyframes blink-text {
+    from, to { color: transparent; }
+    50% { color: inherit; }
 }
-.start-hacking-now a {
-    text-decoration: none;
-    background-image: repeating-linear-gradient(70deg, violet, indigo, blue, green, yellow, orange, red);
-    background-clip: text;
-    background-size: 800% 800%;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    animation: rainbow 3s ease infinite;
-}
-.start-hacking-now img {
-    vertical-align: sub;
-}
-.start-hacking-now img:hover {
-    box-shadow: none;
+section h2::after {
+    content: "_";
+    animation: blink-text .75s step-end infinite;
 }
 footer {
-    font-size: small;
-    font-family: Monospatial, Monospace; 
+    font-style: italic;
 }
-    </style>
+
+#waiting-loader {
+    text-transform: uppercase;
+    word-break: break-all;
+    color: var(--callout-text);
+}
+#waiting-loader::after {
+    content: "…";
+    animation: blink-text .75s step-end infinite;
+}
+
+/**
+ * @group Backgrounds.
+ */
+body {
+    background: #b350ff fixed url("static/img/bg.png") bottom left / auto no-repeat;
+}
+
+/**
+ * @group Layout.
+ */
+body {
+    padding: 3em 2em 2em 2em;
+}
+header {
+    position: fixed;
+}
+video {
+    margin: 2em 0 0 0;
+    max-width: 550px;
+}
+main {
+    margin-left: 600px;
+}
+section {
+    margin: 0 0 2em;
+}
+
+/**
+ * @group Mobile.
+ */
+@media screen and (max-width: 750px) {
+    header {
+        position: static;
+    }
+    header h1 {
+        font-size: 64px;
+        line-height: normal;
+    }
+    header p {
+        font-size: 15px;
+    }
+    video {
+        max-width: 100%;
+    }
+    main {
+        margin-left: 0;
+    }
+    section {
+        margin-top: 3em;
+    }
+    body {
+        background-size: contain;
+    }
+}
+</style>
+    <meta property="og:url" content="https://hex90.party/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Hex90" />
+    <meta property="og:description" content="A queer hacker salon in NYC." />
+    <meta property="og:image" content="https://hex90.party/static/img/bg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hex90" />
+    <meta name="twitter:description" content="A queer hacker salon in NYC." />
+    <meta name="twitter:image" content="https://hex90.party/static/img/bg.png" />
 </head>
 <body>
     <header>
-        <h1>Hex90: Promiscuous Mode</h1>
-        <h2>A queer hacker salon</h2>
-
-        <p class="start-hacking-now"><a href="promiscuous-mode.html">Click here to start hacking now &rarr; <img src="static/img/logo.wireshark.transparent.512x512.png" alt="Wireshark logo" width="50px" /></a></p>
-
-        <p id="Heroine"><a href="https://www.wonderville.nyc/events/hex90-promiscuous-mode" title="Venue web site for 'Hex90: Promiscuous Mode'"><img alt="Banner for Hex90: Promiscuous Mode party shows a rainbow colored starry sky with a bright rainbow arcing across a half-translucent planetary body or small moon." src="static/img/hex90-promiscuous-mode.jpg" /></a></p>
-
-        <p class="start-hacking-now"><a href="promiscuous-mode.html">Click here to start hacking now &rarr; <img src="static/img/logo.wireshark.transparent.512x512.png" alt="Wireshark logo" width="50px" /></a></p>
+        <h1>Hex90</h1>
+        <p>A queer hacker salon in NYC</p>
+        <video id="sizzle-reel" controls="controls"
+             src="static/vid/They%27re%20Called%20Hackers.mp4"
+             poster="static/img/poster.transparent.access-granted.png"
+             data-videos='[
+                 {
+                     "src": "static/vid/They%27re%20Called%20Hackers.mp4",
+                     "poster": "static/img/poster.transparent.access-granted.png"
+                 },
+                 {
+                     "src": "static/vid/Prince%20giving%20advice%20about%20Internet.mp4",
+                     "poster": "static/img/poster.transparent.prince.png"
+                 },
+                 {
+                     "src": "static/vid/Most%20guys%20do.mp4",
+                     "poster": "static/img/poster.nyancat.jpg"
+                 },
+                 {
+                     "src": "static/vid/hackersoftheworldunite.mp4",
+                     "poster": "static/img/poster.transparent.hackers-1995.jpg"
+                 },
+                 {
+                     "src": "static/vid/untitled-protests.mp4",
+                     "poster": "static/img/poster.transparent.motherboard.png"
+                 },
+                 {
+                     "src": "static/vid/RISC%20is%20good.mp4",
+                     "poster": "static/img/poster.white.circle-a-equation-graph.png"
+                 },
+                 {
+                     "src": "static/vid/elaine-the-hacker.mp4",
+                     "poster": "static/img/poster.transparent.matrix-trinity.png"
+                 },
+                 {
+                     "src": "static/vid/Characteristics%20of%20a%20Computer%20Criminal.mp4",
+                     "poster": "static/img/poster.transparent.hacked-text.png"
+                 },
+                 {
+                     "src": "static/vid/This%20is%20what%20we%20do.mp4",
+                     "poster": "static/img/poster.black.white-rabbit-code.jpg"
+                 },
+                 {
+                     "src": "static/vid/Hex90%20-%20Hello%2C%20friend.mp4",
+                     "poster": "static/img/poster.gray.loading.png"
+                 }
+             ]'
+        >
+            <p><a href="static/vid/They%27re%20Called%20Hackers.mp4">Watch the video</a>.</p>
+        </video>
+        <p style="font-size: 12px;">Hex90 is brought to you by <a style="text-transform: capitalize;" href="https://techlearningcollective.com/">Tech Learning Collective</a> and friends.</p>
     </header>
-    <main>
-        <pre>
-log tcp !192.168.0/24 any -&gt; 192.168.0.2 (msg: "QUEER HACKERS OF THE WORLD, UNITE" ; )
-tail /var/log/PROMISCUOUS.MODE
-Aug 13 21:00 hex90 syslogd[135]: QUEER HACKERS OF THE WORLD, UNITE
-
-HEX90 — a queer hacker salon in NYC
-
-It is time for us to reach the sky! By sunlight and moonlight, take flight! Let us imagine ourselves as stardust returning to our celestial origins, intertwingled together. We will burn the stars with our radiance!
-
-Hackers are elemental. Like water, we are shapeless, yet we are every shape. We transition between states as our environment changes, changing the environment in the process. We can be as hard as ice, or as soft as flame. Opaque, or invisible, or spanning everything in between, we are the cloud. Ours is flesh that forms as quickly as it may float away. Impenetrable, or permeable. Our bodies, our choices, from one fluid moment to the next.
-
-Information packets traverse the ether. Netflows quickly vanish over the horizon. There are traces of fire on the wire connecting our vibrating crystalline bodies. Sniff the wire to prime your electronic memory with the sounds of conversations past and present. Enter promiscuous mode, spread your wings, and fly to the stars with us!
-
-info_
-
-August 13, 2022 @ Wonderville
-1186 Broadway, Brooklyn, NY 11221
-9:00pm — 3:00am
-
-~ this venue is accessible
-~ this venue has gender-neutral restrooms
-~ this venue has outdoor space
-
-# dressing up is encouraged but not required
-
-featuring_
-
-~ music performances by
-~~ <a href="https://www.soundcloud.com/kandylion" title="SoundCloud for Kandylion">Kandylion</a>
-~~ <a href="https://www.instagram.com/softserve.the.frosty.dj/" title="Instagram for DJ Softserve">DJ Softserve</a>
-~ livecoded visuals by
-~~ <a href="https://www.instagram.com/charstiles" title="Instagram for Char Stiles">Char Stiles</a> (Livecode.NYC)
-~~ <a href="https://instagram.com/voydescreamsback" title="Instagram for Voyde">Voyde</a>
-~~ <a href="https://gwenpri.me/">gwenpri.me</a> (Livecode.NYC)
-~~ schwaz (Livecode.NYC)
-~ algorave and electronic audio by
-~~ <a href="https://www.instagram.com/aalanzaa" title="Instagram for Alanza">Alanza</a>
-~~ <a href="https://alsoknownasrox.com/">alsoknownasrox</a> (Livecode.NYC)
-~~ Azhad Syed (Livecode.NYC)
-~~ <a href="https://www.instagram.com/dqgorelick" title="Instagram for dan.dog">dan.dog</a>
-~ indie games by <a href="https://www.deathbyaudioarcade.com/">Death By Audio Arcade</a>
-~ hacking demos &amp; education by <a href="https://TechLearningCollective.com/">Tech Learning Collective</a>
-~ text adventure cybersecurity game by <a href="https://shiftctrl.space/">Shift-CTRL Space</a>
-
-DANCE AT THE STAGE, AND BRING YOUR LAPTOP SO YOU CAN HACK AT THE BAR!
-
-In addition to music and visuals, the most unique addition of the Hex90 parties is a hyperlocal cybersecurity (hacking) themed text-adventure game that gave the party its name: Hex90. This game is played on your own laptop, not on a console or arcade cabinet at the venue, but is still only accessible when you are physically at the party venue itself. (Aside from a short "trailer," the game is not available on the public Internet.)
-
-After you connect to the party's Wi-Fi network, you can then connect to the Hex90 game server using your Web browser. But to solve the challenges, you must download and install real hacker tools and learn how to employ real hacking techniques to progress through game levels ranging from network reconnaissance, applied cryptography, and Web exploitation. You've never seen so many queers open so many terminals in one place while being so close to a dance floor, and there's no high quite like it.
-
-We continuously add levels to the game, so expect new challenges at most parties. Moreover, we sometimes incorporate physical-world features of the venue, like padlocks you need to pick that are safeguarding access to secret passwords, QR codes stashed in unexpected places, unassuming but exposed Ethernet cabling that turns out not to be a mistake at all, and so on. At Hex90, the game controller is your computer and the game mechanic is the real world.
-
-All of the tools, techniques, and procedures (TTPs) used to progress in the game levels are skills taught by and equipment used by Tech Learning Collective instructors in our online workshops. Visit TechLearningCollective.com for more information and to enroll.
-
-#------------------#
-# START HACKING AT #
-#------------------#
-<a href="https://hex90.party/">https://hex90.party</a>
-
-#------------------#
-# BUY TICKETS HERE #
-#------------------#
-<a href="https://www.wonderville.nyc/events/hex90-promiscuous-mode">https://www.wonderville.nyc/events/hex90-promiscuous-mode</a>
-
-SUPPORTER TIER:
-$30 - pay if you can
-
-ADVANCE TICKETS:
-$15.00 - str8 cismen
-$10.00 - queers/transes/enbies and femmes
-
-DAY-OF/AT THE DOOR:
-$20.00 - str8 cismen
-$15.00 - queers/transes/enbies and femmes
-
-/**
- * Hex90 is an inclusive event.
- * Door staff is instructed to respect your self-identification.
- */
-
-NOTICE:
-This is an intentionally queer space. Consent and respect are not optional! Anyone behaving unkindly will be removed immediately without a refund. No amount of racism, queerphobia, transphobia, or sexism will be tolerated. This event is a celebration of queer hacking for queer hackers, not for Silicon Valley entrepreneurs, brogrammers, or BitCoin bros. Don't piss off the hackers. ;)
-
-Hex90
-
-###
-        </pre>
-    </main>
-    <footer>
-        <p>Hex90: Promiscuous Mode is brought to you by <a href="https://TechLearningCollective.com/">Tech Learning Collective</a>.</p>
-        <p>Tech Learning Collective is an apprenticeship-based technology school that trains politically self-motivated individuals in the arts of hypermedia, Information Technology, and radical political practice. We offer unparalleled free, by-donation, and low-cost computer classes on topics ranging from fundamental computer literacy to the same offensive computer hacking techniques used by national intelligence agencies and military powers (cyber armies). For more information and to enroll, visit <a href="https://TechLearningCollective.com/">TechLearningCollective.com</a>.</p>
-    </footer>
+    <div class="h-event vevent"><main><div class="p-description description">
+        <section id="next-party">
+            <h2 class="p-name p-summary summary">Scanning for next party info</h2>
+            <p id="waiting-loader"></p>
+            <script>
+                (function () {
+                    function dotdotdot (el) {
+                        var str = Math.random().toString(16).substring(2, 3);
+                        el.innerHTML = el.textContent + str;
+                        setTimeout(dotdotdot, 500, el);
+                    }
+                    var el = document.getElementById('waiting-loader');
+                    dotdotdot(el);
+                })()
+            </script>
+        </section>
+        <footer>
+            <p>These parties are not exclusionary, but they are an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately without a refund. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. The str8s are welcome as long as they don't piss off the hackers. ;)</p>
+        </footer>
+    </div></main></div><!-- .h-event.vevent -->
+    <script src="static/js/main.js"></script>
 </body>
 </html>
