@@ -111,7 +111,7 @@
      * @todo Not yet implemented.
      */
     function showShoppingLinks () {
-        window.location.href = "https://www.wonderville.nyc/events/hex90-overflow";
+        window.location.href = "https://www.wonderville.nyc/events/hex90-transposition";
     }
 
     /**
