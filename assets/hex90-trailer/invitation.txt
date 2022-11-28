@@ -27,13 +27,13 @@ December 3, 2022 @ Wonderville
 featuring_
 
 ~ music performances by
-~~ Sailor Malice
-~~ ÆON
-~~ trans kafka
-~~ heaven ender
+~~ Sailor Malice (@sailor.malice)
+~~ ÆON (@dj__aeon)
+~~ trans kafka (@trans__kafka)
+~~ heaven ender (@heavenender)
 ~ livecoded visuals by
 ~~ gwenpri.me
-~~ Janie Jaffe
+~~ Janie Jaffe (@janiejaffe)
 ~ indie games by Death By Audio Arcade
 ~ hacking demos & education by Tech Learning Collective
 ~ text adventure cybersecurity game by Shift-CTRL Space
