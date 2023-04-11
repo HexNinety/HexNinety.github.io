@@ -154,6 +154,7 @@ section {
     <header>
         <h1>Hex90</h1>
         <p>A queer hacker salon in NYC</p>
+        <p style="text-align: center;"><a href="https://wonderville.nyc/events/hex90-replay">BUY TICKETS HERE</a></p>
         <video id="sizzle-reel" controls="controls"
              src="static/vid/They%27re%20Called%20Hackers.mp4"
              poster="static/img/poster.transparent.access-granted.png"
@@ -210,19 +211,103 @@ section {
     </header>
     <div class="h-event vevent"><main><div class="p-description description">
         <section id="next-party">
-            <h2 class="p-name p-summary summary">Scanning for next party info</h2>
+            <h2 id="event-title" class="p-name p-summary summary"><a href="https://wonderville.nyc/events/hex90-replay" class="u-url url" style="color: inherit; text-decoration: none;">Hex90: Replay</a></h2>
             <p id="waiting-loader"></p>
             <script>
                 (function () {
                     function dotdotdot (el) {
                         var str = Math.random().toString(16).substring(2, 3);
                         el.innerHTML = el.textContent + str;
-                        setTimeout(dotdotdot, 500, el);
+                        // Only continue this for three seconds.
+                        if ( new Date().getTime() < ( begintime.getTime() + 3000 )  ) {
+                            setTimeout(dotdotdot, 500, el);
+                        } else {
+                            el.innerHTML = document.getElementById('event-info').innerHTML;
+                        }
                     }
                     var el = document.getElementById('waiting-loader');
+                    var begintime = new Date();
                     dotdotdot(el);
                 })()
             </script>
+            <div id="event-info" style="display: none;">
+                <pre style="white-space: pre-wrap; word-break: normal;">
+HEX90 &mdash; a queer hacker salon in NYC
+
+Queer hackers of the world, unite! There's a war going on. The battlefield is the mind. And the prize is the soul. Remember, hacking isn't just a crime. It's a survival trait.
+
+info_
+
+April 22, 2023 @ Wonderville
+1186 Broadway, Brooklyn, NY 11221
+8:00pm — 4:00am
+
+~ this venue is accessible
+~ this venue has gender-neutral restrooms
+~ this venue has outdoor space
+
+# dressing up is encouraged but not required
+
+featuring_
+
+~ music performances by
+~~ Nina Vicious
+~~ trans kafka
+~~ heaven ender
+~~ Rana Ransom
+~~ dis_aster_ous
+~ livecoded visuals by
+~~ gwenpri.me
+~ indie games by Death By Audio Arcade
+~ hacking demos & education by Tech Learning Collective
+~ text adventure cybersecurity game by Shift-CTRL Space
+
+DANCE AT THE STAGE, AND BRING YOUR LAPTOP SO YOU CAN HACK AT THE BAR!
+
+In addition to music and visuals, the most unique addition of the Hex90 parties is a hyperlocal cybersecurity (hacking) themed text-adventure game that gave the party its name: Hex90. This game is played on your own laptop, not on a console or arcade cabinet at the venue, but is still only accessible when you are physically at the party venue itself. (Aside from a short "trailer," the game is not available on the public Internet.)
+
+After you connect to the party's Wi-Fi network, you can then connect to the Hex90 game server using your Web browser. But to solve the challenges, you must download and install real hacker tools and learn how to employ real hacking techniques to progress through game levels ranging from network reconnaissance, applied cryptography, and Web exploitation. You've never seen so many queers open so many terminals in one place while being so close to a dance floor, and there's no high quite like it.
+
+We continuously add levels to the game, so expect new challenges at most parties. Moreover, we sometimes incorporate physical-world features of the venue, like padlocks you need to pick that are safeguarding access to secret passwords, QR codes stashed in unexpected places, unassuming but exposed Ethernet cabling that turns out not to be a mistake at all, and so on. At Hex90, the game controller is your computer and the game mechanic is the real world.
+
+All of the tools, techniques, and procedures (TTPs) used to progress in the game levels are skills taught by and equipment used by Tech Learning Collective instructors in our online workshops. Visit TechLearningCollective.com for more information and to enroll.
+
+#------------------#
+# START HACKING AT #
+#------------------#
+https://hex90.party
+
+#------------------#
+# BUY TICKETS HERE #
+#------------------#
+
+<a href="https://wonderville.nyc/events/hex90-replay">https://wonderville.nyc/events/hex90-replay</a>
+
+SUPPORTER TIER:
+$30 - pay if you can
+
+ADVANCE TICKETS:
+$15.00 - str8 cismen
+$10.00 - queers/transes/enbies and femmes
+
+DAY-OF/AT THE DOOR:
+$20.00 - str8 cismen
+$15.00 - queers/transes/enbies and femmes
+
+/**
+* Hex90 is an inclusive event.
+* Door staff is instructed to respect your self-identification.
+*/
+
+NOTICE:
+
+This is an intentionally queer space. Consent and respect are not optional! Anyone behaving unkindly will be removed immediately without a refund. No amount of racism, queerphobia, transphobia, or sexism will be tolerated. This event is a celebration of queer hacking for queer hackers, not for Silicon Valley entrepreneurs, brogrammers, or BitCoin bros. Don't piss off the hackers. ;)
+
+Hex90
+
+###
+</pre>
+            </div>
         </section>
         <footer>
             <p>These parties are not exclusionary, but they are an intentionally queer space. Consent and respect are <strong>not optional</strong>! Anyone being disrespectful will be removed immediately without a refund. We are <strong>against technocapitalist motives</strong>. We are a space for queer hackers, not for Silicon Valley fans. The str8s are welcome as long as they don't piss off the hackers. ;)</p>
